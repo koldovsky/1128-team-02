@@ -27,8 +27,30 @@
   <p class="best picks">
     Best picks for your beloved companions only in Happy Paw.
   </p>
+  <script>let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+    
+    function showSlides(n) {
+      let i;
+      const slides = document.getElementsByClassName("carousel-container")[0].children;
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+    </script>
   <div class="products__carousel">
-    <button class="products__carousel-bttn-prev">
+    <!--<button class="products__carousel-bttn-prev">
       <svg class="arrow-svg_1j4" viewBox="0 0 30 30">
         <defs>
           <path
@@ -42,8 +64,9 @@
           xlink:href="#a-1704646563667"
         ></use>
       </svg>
-    </button>
+    </button>-->
     <div class="products__carousel-slides">
+      <div class="carousel-container">
       <article class="products__carousel-animals-item">
         <img class="animals animals-size" src="img/forcats.webp" alt="Cat" />
         <h3>For Cats →</h3>
@@ -105,7 +128,9 @@
         </p>
       </article>
     </div>
-    <button class="products__carousel-bttn-next">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!--<button class="products__carousel-bttn-next">
       <svg class="arrow-svg_1j4" viewBox="0 0 30 30">
         <defs>
           <path
@@ -119,7 +144,7 @@
           xlink:href="#a-1704646563667"
         ></use>
       </svg>
-    </button>
+    </button>-->
   </div>
 </section>
 <!--</body>
