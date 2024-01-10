@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
-
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+:root {
+font-family: 'Baloo 2'; sans-serif;
+}
 .animals {
   border-color: #11ffee00;
   border-width: 5px;
@@ -10,6 +17,9 @@
   width: 100px;
 
 }
+.animals_fonts {
+
+}
 .products-title {
   font-family: "Baloo 2", sans-serif;
   font-optical-sizing: auto;
@@ -17,7 +27,7 @@
   font-size: 50px;
   line-height: 60px;
   font-style: normal;
-  color: #3c3731;
+  color: #fa8250;
 }
 .best picks {
   font-family: "Baloo 2", sans-serif;
