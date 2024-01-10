@@ -8,6 +8,7 @@
 }
 .animals-size {
   width: 150px;
+
 }
 .products-title {
   font-family: "Baloo 2", sans-serif;
@@ -28,11 +29,12 @@
 }
 .products__carousel-animals-item {
   border-color: #f3b250;
-  border-width: 5px;
+  border-width: 1px;
   border-style: solid;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 .bone {
   width: 60px;
