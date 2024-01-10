@@ -22,12 +22,12 @@ font-family: 'Baloo 2', sans-serif;
 }
 .products-title {
   font-family: "Baloo 2", sans-serif;
+  color: #fa8250;
   font-optical-sizing: auto;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 80px;
   line-height: 60px;
   font-style: normal;
-  color: #fa8250;
 }
 .best picks {
   font-family: 'Baloo 2', sans-serif;
