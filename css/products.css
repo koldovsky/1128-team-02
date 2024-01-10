@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 :root {
-font-family: 'Baloo 2', sans-serif;
+  font-family: "Baloo 2", sans-serif;
 }
 .animals {
   border-color: #11ffee00;
@@ -15,10 +15,6 @@ font-family: 'Baloo 2', sans-serif;
 }
 .animals-size {
   width: 100px;
-
-}
-.animals_fonts {
-
 }
 .products-title {
   font-family: "Baloo 2", sans-serif;
@@ -30,7 +26,7 @@ font-family: 'Baloo 2', sans-serif;
   font-style: normal;
 }
 .best picks {
-  font-family: 'Baloo 2', sans-serif;
+  font-family: "Baloo 2", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-size: 20px;
@@ -60,32 +56,4 @@ h2 {
 }
 h3 {
   text-align: center;
-}
-.products__carousel {
-  position: relative;
-  width: 100%;
-}
-
-.products__carousel-slides {
-  display: flex;
-}
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
 }
