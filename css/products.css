@@ -1,6 +1,10 @@
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f5f7fa;
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap") * {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Baloo 2", sans-serif;
 }
 .animals {
   border-color: #11ffee00;
@@ -12,24 +16,21 @@ body {
   width: 150px;
 }
 .products-title {
-  font-style: normal;
-  font-weight: bold;
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-size: 50px;
   line-height: 60px;
+  font-style: normal;
   color: #3c3731;
-  margin-left: auto;
-  margin-right: auto;
 }
 .best picks {
-  font-family: Lobster, monospace;
-  font-style: normal;
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
   font-weight: bold;
   font-size: 20px;
   line-height: 30px;
-  color: #3c3;
-  margin-left: auto;
-  margin-right: auto;
-  width: 6em;
+  color: #958b7e;
 }
 .products__carousel-animals-item {
   width: 300px;
@@ -42,6 +43,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-p { text-align: center }
-h2 { text-align: center }
-h3 { text-align: center }
+p {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
