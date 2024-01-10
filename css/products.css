@@ -77,13 +77,13 @@ h3 {
 }
 .food-n-stuff-btn1 {
   position: absolute;
-  top: 45%;
-  left: 140%;
+  top: 50%;
+  left: 130%;
   background-color: #f1e4a8;
   color: rgb(201, 89, 25);
   font-size: 14px;
-  padding: 12px 24px;
+  padding: 10px 15px;
   border: none;
   cursor: pointer;
-  border-radius: 10%;
+  border-radius: 20%;
 }
