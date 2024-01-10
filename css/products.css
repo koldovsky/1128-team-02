@@ -77,8 +77,8 @@ h3 {
 }
 .food-n-stuff-btn1 {
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
