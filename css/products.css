@@ -57,34 +57,3 @@ h2 {
 h3 {
   text-align: center;
 }
-.products__food-n-stuff {
-  position: relative;
-  width: 50%;
-}
-<!--.food-n-stuff-btn {
-  position: absolute;
-  top: 80%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.food-n-stuff-btn1 {
-  position: absolute;
-  width: 130px;
-  top: 40%;
-  left: 130%;
-  background-color: #ffe6d4;
-  color: rgb(201, 89, 25);
-  font-size: 14px;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20%;
-}-->
