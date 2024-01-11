@@ -4,26 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link
-      rel="shortcut icon"
-      href="https://placekitten.com/96/139"
-      type="image/x-icon"
-    />
+    <title>OPTY Pet Carrier</title>
+    <link rel="shortcut icon" href="img/paw-shortcut.png" type="image/x-icon" />
   </head>
   <body>
-    <!-- <header data-include="header.partial.html"></header> -->
+    <section data-include="index.mainpage.partial.html"></section>
+    <section data-include="index.mainhero.partial.html"></section>
     <main>
       <a
-        href="index.html"
+        href="storehomepage.html"
         style="text-decoration: none; color: inherit"
         class="store-homepage-link"
         >Store homepage</a
       >
-      <div class="product_about">
+      <div class="product-about">
         <div class="carousel-controls">
           <div class="carousel-arrow">
-            <button class="arrow-button"
+            <button
+              class="carousel-controls__arrow-button"
               style="
                 border: none;
                 cursor: pointer;
@@ -33,7 +31,7 @@
               type="button"
             >
               <img
-                class="arrow-img"
+                class="carousel-controls__arrow-img"
                 src="img/arrow-left.svg"
                 alt="Previous Button"
               />
@@ -41,11 +39,12 @@
           </div>
           <img
             width="427"
-            src="img/petCarrierWithCat.png"
+            src="img/pet-carrier-with-cat.png"
             alt="OPTY Pet Carrier (2321)"
           />
           <div class="carousel-arrow">
-            <button class="arrow-button"
+            <button
+              class="carousel-controls__arrow-button"
               style="
                 border: none;
                 cursor: pointer;
@@ -56,7 +55,7 @@
             >
               <img
                 width="20"
-                class="arrow-img"
+                class="carousel-controls__arrow-img"
                 src="img/arrow-right.png"
                 alt="Next Button"
               />
@@ -66,29 +65,34 @@
         <div class="carousel-image">
           <img
             width="102"
-            src="img/petCarrierWithCat.png"
+            src="img/pet-carrier-with-cat.png"
             alt="OPTY Pet Carrier inner slide"
           />
         </div>
         <div class="trending-product-details">
-          <p class="availability">In stock</p>
-          <h4 class="trending-product-name">OPTY Pet Carrier (2321)</h4>
-          <p class="product-code">Product code 48</p>
-          <p class="trending-products__price" data-test="price">$8,00</p>
-          <form class="product-line" action="" method="post">
-            <div class="quantity-box">
+          <p class="trending-product-details__availability">In stock</p>
+          <h4 class="trending-product-details__name">
+            OPTY Pet Carrier (2321)
+          </h4>
+          <p class="trending-product-details__code">Product code 48</p>
+          <p class="trending-product-details__price" data-test="price">$8,00</p>
+          <form class="trending-product-details__line" action="" method="post">
+            <div class="trending-product-details__quantity-box">
               <input
-                class="quantity-input"
+                class="trending-product-details__quantity-input"
                 type="number"
                 name="quantity"
                 value="1"
               />
             </div>
-            <button class="add-to-cart-button" type="submit">
+            <button
+              class="trending-product-details__add-to-cart-button"
+              type="submit"
+            >
               Add to cart
             </button>
           </form>
-          <div class="product-description">
+          <div class="trending-product-details__description">
             <p>DESCRIPTION</p>
             <p>
               This plastic carrier is large enough even for adult cats. We
