@@ -1,6 +1,7 @@
 <section class="best-deals">
   <div class="best-deals__aquarium">
     <div class="best-deals__aquarium-wrapper">
+      <!-- Responsive Design: Consider handling width in CSS for responsiveness -->
       <img
         class="best-deals__image"
         src="img/aquarium-best-deals.png"
@@ -9,9 +10,10 @@
       />
     </div>
     <h2 class="best-deals__title">Save 10% on Aquariums</h2>
-    <p class="best-deals__cta">
+    <!-- Link Accessibility: Consider adding aria-label if necessary -->
+    <div class="best-deals__cta">
       <a class="best-deals__cta-link" href="#">Discover Now →</a>
-    </p>
+    </div>
   </div>
 
   <div class="best-deals__pets">
@@ -26,12 +28,10 @@
     <p class="best-deals__category">TOYS, TREATS & LEASHES</p>
     <h2 class="best-deals__title">Best Picks for Your Pets</h2>
     <p class="best-deals__price"><em>from $1.99</em></p>
-    <div class="best-deals__learn-more-button">
-      <button class="best-deals__button" type="button">
-        <a class="best-deals__button-link" href="#">Learn More</a>
-      </button>
+    <div class="best-deals__button">
+      <a class="best-deals__button-link" href="#">
+        <span class="best-deals__button-content"> Learn More </span>
+      </a>
     </div>
   </div>
-
-  <div class="best-deals__partners"></div>
 </section>
