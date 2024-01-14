@@ -8,15 +8,6 @@
   transition: transform 0.5s ease-in-out;
 }
 
-article {
-  width: 100px;
-  height: 100px;
-  margin: 0 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
 
 button {
   position: absolute;
@@ -42,6 +33,11 @@ button {
   width: 250px;
   margin: 0 25px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
 }
 .pet-item {
   border-radius: 50%;
