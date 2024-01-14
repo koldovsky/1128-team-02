@@ -45,6 +45,7 @@ img {
 .next { right: 0; }
 
 .products__carousel-animals-item {
+  width: 1250px;
   border-color: #f3b250;
   border-width: 1px;
   border-style: solid;
