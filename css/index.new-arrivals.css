@@ -1,0 +1,16 @@
+.arrivals__title {
+    font-size: 50px;
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+.arrivals__bone-image {
+    width: 65px;
+    text-align: center;
+}
+
+.arrivals__about {
+    font-size: 19px;
+    text-align: center;
+    color: var(--main-text-color);
+}

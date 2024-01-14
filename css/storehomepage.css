@@ -28,14 +28,14 @@ a:hover, a:active {
 
 
 .storehomepage {
-    padding: 95px 32px;
+    padding: 100px 15px;
     margin: auto;
+    max-width: 1200px;
 }
 
 .storehomepage__title--store, .storehomepage__title--products {
     font-size: 2rem;
     color: var(--heading-text-color);
-    padding: 0px 15px;
     white-space: nowrap;
 }
 
@@ -46,11 +46,12 @@ a:hover, a:active {
 
 .storehomepage__productslist{
     margin: 25px 0 0 0;
+    padding: 0px 15px;
+    max-width: 1170px;
     display: grid;
     gap: 30px;
     align-items: center;
     justify-items: center;
-    /* grid-auto-columns: row; */
     grid-template-columns: (auto-fit, 1fr);
 }
 
