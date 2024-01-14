@@ -1,26 +1,97 @@
 .promotion {
     background-image: url("../img/coundown-background.png");
     background-size: cover;
-    padding-top: 300px;
-    padding-bottom: 300px;
+    min-height:860px;
+}
+
+.promotion__block {
+    padding-top: 90px;
+    padding-left: 100px;
+    margin-left: 142.5px;
+    max-width: 570px;
 }
 
 .promotion__subtitle {
+    font-family: url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+    font-size: 15px;
+    font-weight: bold;
+    color: #45c1c7;
     text-align: left;
 }
 
 .promotion__title {
+    margin-top: 20px;
+    font-size: 82px;
+    color: #3c3731;
     text-align: left;
+    line-height: 70px;
 }
 
 .promotion__description {
+    margin-top: 35px;
+    font-family: url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+    font-size: 19px;
+    color: #958b7e;
     text-align: left;
+    line-height: 28.5px;
+}
+
+.promotion__discount {
+    font-weight: bold;
+    color: #ed6435;
 }
 
 .promotion__countdown {
-    margin: 25px;
-    max-width: 500px;
+    margin-top: 50px;
+    max-width: 450px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 3em;
+    gap: 23px;
+}
+
+.countdown__component {
+    border-radius: 5px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #45c1c7;
+    width: 93px;
+    height: 93px;
+    padding: 10px 10px;
+}
+
+.countdown__number {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3c3731;;
+}
+
+.countdown__unit {
+    font-family: url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+    font-size: 18px;
+    color: #3c3731;
+}
+
+.promotion__button__title {
+    margin-top: 35px;
+    background-color: #b2e7e9;
+    display: inline-block;
+    padding: 10px 10px;
+    border-width: 1px;
+    border-radius: 25px;
+    border-color: transparent;
+    border-style: solid;
+    height: 48.5px;
+    width: 133px;
+    text-align: center;
+    font-family: url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+    color: #45c1c7;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16.5px;
+}
+
+.promotion__button__title:hover {
+    background-color: #ffe6d4;
+    color: #ed6435;
 }
