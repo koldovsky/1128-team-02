@@ -5,6 +5,11 @@
 
 :root {
     --heading-text-color: #3c3731;
+    --button-default-color:  #fc76002b;
+    --button-text-hover-color: #45c1c7;
+    --button-hover-color: #45c1c77a;
+    --button-active-color: #ed6435;
+    --button-text-active-color: #45c1c7;
 }
 
 img {
@@ -12,31 +17,103 @@ img {
     height: auto;
 }
 
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+    color: var(--main-text-color)
+}
+
 
 .storehomepage {
-    padding: 90px 32px;
+    padding: 95px 32px;
     margin: auto;
 }
 
 .storehomepage__title--store, .storehomepage__title--products {
     font-size: 2rem;
     color: var(--heading-text-color);
-    padding: 15px;
+    padding: 0px 15px;
     white-space: nowrap;
 }
 
-.storehomepage__productslist {
+.storehomepage__title--products {
+    margin-top: 73px;
+}
+
+
+.storehomepage__productslist{
     margin: 25px 0 0 0;
     display: grid;
     gap: 30px;
     align-items: center;
     justify-items: center;
-    grid-auto-columns: row;
+    /* grid-auto-columns: row; */
     grid-template-columns: (auto-fit, 1fr);
 }
 
 .prodlist-item {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.prodlist-item-img {
+    width: 100%;
+}
+
+.prodlist-item-name {
+    margin: 8px 0px 0px 0px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.125rem;
+    color: var(--main-text-color);
+    white-space: nowrap;
+}
+
+.prodlist-item-price {
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.125rem;
+    color: var(--price-text-color);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.prodlist-item-buybtn {
+    margin: 24px 0px 0px;
+    display: inline-block;
+    padding: 7px 22px;
+    border-radius: 20px;
+    border-color: transparent;
+    font-size: 0.9375rem;
+    font-family: "PT Sans", sans-serif;
+    background-color: var(--button-default-color);
+    color: var(--price-text-color)
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-text-hover-color);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--button-active-color);
+    color: var(--button-text-active-color)
+}
+
+
+.storehomepage__listnav {
+    margin: 56px 0px 0px 0px;
+}
+
+.navprodperpage-lbl{
+    font-size: 1.0625rem;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 100;
+    color: var(--main-text-color);
 }
 
 
