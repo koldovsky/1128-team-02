@@ -29,8 +29,7 @@
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  background-color: #333;
-  color: #fff;
+  color: var(--button-cart-text-color)
   border: none;
   outline: none;
 }
@@ -39,7 +38,7 @@
 .next { right: 0; }
 
 .products__carousel-animals-item {
-  border-color: #f3b250;
+  border-color: var(--button-cart-background-color-hover)
   border-width: 1px;
   border-style: solid;
   width: 250px;
@@ -62,7 +61,7 @@
   border-radius: 25px;
   color: var(--button-cart-text-color);
   cursor: pointer;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Baloo 2", sans-serif;
   font-size: 16.5px;
   font-weight: bold;
   line-height: 16.5px;
