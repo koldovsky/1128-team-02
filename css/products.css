@@ -58,6 +58,6 @@ img {
   margin-right: auto;
   text-align: center;
 }
-img {
+.pet-item {
   border-radius: 50%;
 }
