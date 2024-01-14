@@ -17,7 +17,7 @@
   font-style: normal;
 }
 .best picks {
-  font-family: "Baloo 2", sans-serif;
+  font-family: Baloo 2, sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-size: 20px;
@@ -56,4 +56,8 @@ h3 {
 .products__carousel-animals-item {
   width: calc(100% / 3);
   height: auto;
+}
+.products__food-n-stuff {
+  display: flex;
+  justify-content: space-between;
 }
