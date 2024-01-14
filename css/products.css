@@ -1,61 +1,47 @@
 /*carousel css*/
-* {
-  box-sizing: flex;
-}
-
-.carousel {
-  position: relative;
-  overflow: hidden;
-  width: 75%;
-  margin: 20px 0;
-}
-
 .carousel-container {
+  position: relative;
+}
+
+.carousel-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 1250px; 
-  overflow: hidden;
-  margin: 0 auto;
 }
 
 article {
-  width: calc(100% / 3);
-  flex: 0 0 auto;
-  padding: 20px;
-  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.prev, .next {
+button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
-  cursor: pointer;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
+  font-size: 24px;
+  background: none;
   border: none;
-  outline: none;
+  cursor: pointer;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
+.prev {
+  left: 10px;
+}
 
+.next {
+  right: 10px;
+}
 .products__carousel-animals-item {
-  width: 1250px;
   border-color: #f3b250;
   border-width: 1px;
   border-style: solid;
   width: 250px;
   margin: 0 25px;
   text-align: center;
- 
 }
 .pet-item {
   border-radius: 50%;
