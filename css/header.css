@@ -1,0 +1,86 @@
+
+.header__info{
+    color: red;
+   padding: 5px;
+   margin: 5px;
+}
+
+.header__data{
+    background-color: rgb(242, 232, 228);
+    color: red;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__contacts-info{
+    display: flex;   
+}
+
+.header__data .header__contakts{
+    text-decoration: none;
+    color: red;
+    margin-right: 20px;
+}
+
+.header__menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.header__data .header__contakts:hover{
+    text-decoration: underline;
+}
+
+.header__small-logo img {
+    width: 200px; 
+    height: auto; 
+    padding: 5px;
+    margin: 5px;
+}
+
+
+
+.header__nav a {
+    font-weight: bold;
+    color: black; 
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.header__nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px; 
+    background-color: black; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
+}
+
+.header__nav a:hover {
+    color: red; 
+}
+
+.header__nav a:hover::after {
+    width: 100%; 
+}
+.header__social-icons{
+    display: flex;
+}
+.header__social-icons img{
+    color: #45c1c7;
+    width: 100px; 
+    height: auto; 
+    padding: 5px;
+    margin: 5px;
+    
+}
+
+
