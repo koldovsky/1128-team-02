@@ -15,17 +15,11 @@
   transition: transform 0.5s ease-in-out;
 }
 
-article {
-  width: calc(100% / 3);
-  flex: 0 0 auto;
-  padding: 20px;
-  text-align: center;
-}
 
 .pet-item {
-  max-width: 100%;
+  width: 250px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .prev, .next {
@@ -48,18 +42,6 @@ article {
   border-color: #f3b250;
   border-width: 1px;
   border-style: solid;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-img {
-  border-radius: 50%;
-}
-.products__carousel-animals-item {
-  border-color: #f3b250;
-  border-width: 1px;
-  border-style: solid;
   width: 250px;
   margin: 0 25px;
   text-align: center;
@@ -68,8 +50,5 @@ img {
   align-items: center;
   color: #fff;
 }
-}
-.pet-item {
-  border-radius: 50%;
-}
+
 /*food-n-stuff css*/
