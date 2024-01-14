@@ -54,3 +54,18 @@
   color: #f3b250;
   text-align: center;
 }
+.foodbutton {
+  margin-top: 24px;
+  min-width: 145px;
+  min-height: 49px;
+  background-color: var(--button-cart-background-color);
+  border-radius: 25px;
+  color: var(--button-cart-text-color);
+  cursor: pointer;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 16.5px;
+  padding: 16px 28px;
+  border: none;
+}
