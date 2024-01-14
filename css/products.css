@@ -1,12 +1,12 @@
 /*carousel css*/
 * {
-  box-sizing: flex;
+  box-sizing: border-box;
 }
 
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 75%;
+  width: 100%;
   margin: 20px 0;
 }
 
@@ -15,17 +15,11 @@
   transition: transform 0.5s ease-in-out;
 }
 
-article {
-  width: calc(100% / 3);
-  flex: 0 0 auto;
-  padding: 20px;
-  text-align: center;
-}
 
-img {
-  max-width: 100%;
+.pet-item {
+  width: 200px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .prev, .next {
@@ -35,8 +29,7 @@ img {
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  background-color: #333;
-  color: #fff;
+  color: var(--button-cart-text-color)
   border: none;
   outline: none;
 }
@@ -45,16 +38,33 @@ img {
 .next { right: 0; }
 
 .products__carousel-animals-item {
-  width: 1250px;
-  border-color: #f3b250;
+  border-color: var(--button-cart-background-color-hover)
   border-width: 1px;
   border-style: solid;
   width: 250px;
   margin: 0 25px;
   text-align: center;
- 
 }
-.pet-item {
-  border-radius: 50%;
-}
+
 /*food-n-stuff css*/
+.products-title {
+  font-family: 'baloo 2', sans-serif;
+  font-size: medium;
+  color: #f3b250;
+  text-align: center;
+}
+.foodbutton {
+  margin-top: 24px;
+  min-width: 145px;
+  min-height: 49px;
+  background-color: var(--button-cart-background-color-hover);
+  border-radius: 25px;
+  color: var(--button-cart-text-color);
+  cursor: pointer;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 16.5px;
+  padding: 16px 28px;
+  border: none;
+}
