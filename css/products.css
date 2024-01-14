@@ -58,7 +58,7 @@
   margin-top: 24px;
   min-width: 145px;
   min-height: 49px;
-  background-color: var(--button-cart-background-color);
+  background-color: var(--button-cart-background-color-hover);
   border-radius: 25px;
   color: var(--button-cart-text-color);
   cursor: pointer;
