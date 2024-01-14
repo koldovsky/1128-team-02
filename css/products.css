@@ -49,8 +49,7 @@ img {
   border-width: 1px;
   border-style: solid;
   width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 25px;
   text-align: center;
  
 }
