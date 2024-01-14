@@ -1,9 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 :root {
+  --title-text-color: rgb(60, 55, 49);
+  --main-text-color: rgb(149, 139, 126);
+  --price-text-color: rgb(237, 100, 53);
+  --button-cart-background-color: rgb(178, 231, 233);
+  --button-cart-text-color: rgb(69, 193, 199);
+  --button-cart-background-color-hover: rgb(255, 230, 212);
   font-family: "Baloo 2", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
