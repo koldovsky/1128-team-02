@@ -13,6 +13,9 @@
 .carousel-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 1250px; 
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 article {
