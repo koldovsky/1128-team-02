@@ -1,16 +1,32 @@
 .arrivals__title {
-    font-size: 50px;
-    text-align: center;
-    color: var(--title-text-color);
+  font-size: 50px;
+  text-align: center;
+  color: var(--title-text-color);
 }
 
 .arrivals__bone-image {
-    width: 65px;
-    text-align: center;
+  width: 65px;
+  text-align: center;
 }
 
 .arrivals__about {
-    font-size: 19px;
-    text-align: center;
-    color: var(--main-text-color);
+  font-size: 19px;
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+.arrivals__carousel-slides-item-btn-add {
+  background-color: var(--button-cart-background-color);
+  border-radius: 25px;
+  border: 1px solid;
+  border-color: var(--button-cart-background-color);
+  text-align: center;
+  cursor: pointer;
+}
+
+.arrivals__carousel-btn-content {
+  font-family: "PT Sans", sans-serif;
+  font: bold;
+  font-size: 16.5px;
+  color: var(--button-cart-text-color);
 }
