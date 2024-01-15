@@ -1,6 +1,6 @@
 .best-deals {
     color: #fbf4f2;
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
