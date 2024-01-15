@@ -59,7 +59,7 @@
 .foodbutton {
   position: absolute;
   top: 70%;
-  left: 15%;
+  left: 20%;
   transform: translate(-50%, -50%);
   margin-top: 24px;
   min-width: 145px;
