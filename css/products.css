@@ -82,10 +82,10 @@
   margin: 50px; 
 }
 .foodpic {
-  max-width: 100%; 
+  width: fit-content; 
   }
 .stuffpic {
-  max-width: 100%; 
+  width: fit-content;
 }
 .bonelittleimg {
   width: 100px;
