@@ -59,7 +59,7 @@
 .foodbutton {
   position: absolute;
   top: 70%;
-  left: 20%;
+  left: 15%;
   transform: translate(-50%, -50%);
   margin-top: 24px;
   min-width: 145px;
@@ -140,7 +140,7 @@
 .foodtext {
   position: absolute;
   top: 25%;
-  left: 10%;
+  left: 7%;
   font-weight: 700;
   font-size: 60px;
   color: var(--title-text-color);
@@ -149,7 +149,7 @@
 .foodtextt {
   position: absolute;
   top: 40%;
-  left: 10%;
+  left: 7%;
   font-weight: 700;
   font-size: 60px;
   color: var(--title-text-color);
