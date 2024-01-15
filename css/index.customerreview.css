@@ -49,6 +49,10 @@
     flex-direction: row;
 }
 
+.customer-reviews__carousel-slides {
+  display: flex;
+}
+
 .customer-reviews__carousel-slides-item {
     flex-direction: row;
     border: 1px solid #f3b250;
