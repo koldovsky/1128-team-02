@@ -142,16 +142,16 @@
   top: 25%;
   left: 10%;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 60px;
   color: var(--title-text-color);
   line-height: 60px;
 }
 .foodtextt {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 10%;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 60px;
   color: var(--title-text-color);
   line-height: 60px;
 }
