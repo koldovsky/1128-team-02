@@ -155,3 +155,21 @@
   color: var(--title-text-color);
   line-height: 60px;
 }
+.stufftext {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--title-text-color);
+  line-height: 50px;
+}
+.redstufftext {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--price-text-color);
+  line-height: 50px;
+}
