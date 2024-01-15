@@ -12,7 +12,7 @@
 }
 
 .promotion__subtitle {
-    font-family: url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+    font-family: 'PT Sans', sans-serif;;
     font-size: 15px;
     font-weight: bold;
     color: #45c1c7;
