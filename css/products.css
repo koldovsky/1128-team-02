@@ -130,10 +130,15 @@
 }
 .redtext {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 10%;
 }
 .foodtext {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.foodtextt {
   position: absolute;
   top: 30%;
   left: 10%;
