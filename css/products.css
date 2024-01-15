@@ -82,11 +82,12 @@
   margin: 50px; 
 }
 .foodpic {
-  width: fit-content; 
+  width: 600px; 
+  height: 320px;
   }
 .stuffpic {
-  width: fit-content;
-}
+  width: 600px;
+  height: 320px;
 .bonelittleimg {
   width: 100px;
   margin: auto;
