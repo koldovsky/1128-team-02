@@ -8,6 +8,7 @@
 :root {
   --title-text-color: rgb(60, 55, 49);
   --main-text-color: rgb(149, 139, 126);
+  --description-text-color: rgb(142, 142, 142);
   --price-text-color: rgb(237, 100, 53);
   --button-cart-background-color: rgb(178, 231, 233);
   --button-cart-text-color: rgb(69, 193, 199);
