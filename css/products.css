@@ -1,60 +1,70 @@
+/*carousel css*/
+* {
+  box-sizing: border-box;
+}
 
-.animals {
-  border-color: #11ffee00;
-  border-width: 5px;
-  border-style: solid;
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.pet-item {
+  width: 200px;
+  height: auto;
   border-radius: 50%;
 }
-.animals-size {
-  width: 100px;
-}
-.products-title {
-  font-family: "Baloo 2", sans-serif;
-  color: #fa8250;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 60px;
-  font-style: normal;
-}
-.best picks {
-  font-family: "Baloo 2", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 20px;
-  line-height: 30px;
-  color: #958b7e;
-}
-.products__carousel-animals-item {
-  border-color: #f3b250;
-  border-width: 1px;
-  border-style: solid;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.bone {
-  width: 60px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-p {
-  text-align: center;
-}
-h2 {
-  text-align: center;
-}
-h3 {
-  text-align: center;
-}
-.products__carousel-slides {
-  display: flex;
-  flex-wrap: wrap;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--button-cart-text-color)
+  border: none;
+  outline: none;
 }
 
+.prev { left: 0; }
+.next { right: 0; }
+
 .products__carousel-animals-item {
-  width: calc(100% / 3);
-  height: auto;
+  border-color: var(--button-cart-background-color-hover)
+  border-width: 1px;
+  border-style: solid;
+  width: 250px;
+  margin: 0 25px;
+  text-align: center;
+}
+
+/*food-n-stuff css*/
+.products-title {
+  font-family: 'baloo 2', sans-serif;
+  font-size: medium;
+  color: #f3b250;
+  text-align: center;
+}
+.foodbutton {
+  margin-top: 24px;
+  min-width: 145px;
+  min-height: 49px;
+  background-color: var(--button-cart-background-color-hover);
+  border-radius: 25px;
+  color: var(--button-cart-text-color);
+  cursor: pointer;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 16.5px;
+  padding: 16px 28px;
+  border: none;
 }

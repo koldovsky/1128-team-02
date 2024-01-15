@@ -1,125 +1,87 @@
-<!-- <section class="products" by Andrii Zerkal>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Animal Products</title>
-    <header>My part of teamwork</header>
-  </head>
-  <body>-->
 <section class="products">
+ <!-- Future script<script>
+    const carousel = document.querySelector(".carousel-container");
+    const articles = document.querySelectorAll("article");
+    const articleWidth = articles[0].offsetWidth;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      carousel.style.transform = `translateX(${-index * articleWidth}px)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % articles.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + articles.length) % articles.length;
+      showSlide(currentIndex);
+    }
+
+    window.addEventListener("resize", () => {
+      articleWidth = articles[0].offsetWidth;
+      showSlide(currentIndex);
+    });
+
+    showSlide(currentIndex);
+  </script>-->
   <link rel="stylesheet" href="css/products.css" />
   <div class="products__food-n-stuff">
-    <img src="img/food-n-stuff.png" alt="fud-n-stuff-pic" />
-    <button class="food-n-stuff-btn" type="button"> Buy Now </button>
-    <button class="food-n-stuff-btn1" type="button"> See Products </button>
+    <img src="img/foodpic.webp" alt="food-pic" />
+    <img src="img/stuffpic.webp" alt="stuff-pic" />
+    <button class="foodbutton" type="button">
+      Buy Now
+    </button>
+    <button class="foodbutton" type="button">
+      See products
+    </button>
   </div>
   <h2 class="products__title">Any Products for Any Pets!</h2>
   <img class="bone" src="img/littlebone.svg" alt="Little Bone" />
   <p class="best picks">
     Best picks for your beloved companions only in Happy Paw.
   </p>
-  <div class="products__carousel">
-    <button class="products__carousel-bttn-prev">
-      <svg class="arrow-svg_1j4" viewBox="0 0 30 30">
-        <defs>
-          <path
-            d="M19.533 15l-9.1-9.45c-.577-.6-.577-1.5 0-2.1.578-.6 1.445-.6 2.023 0l10.11 10.5c.29.3.434.75.434 1.05 0 .45-.144.75-.433 1.05l-10.111 10.5c-.29.3-.578.45-1.012.45-.433 0-.722-.15-1.01-.45-.578-.6-.578-1.5 0-2.1l9.1-9.45z"
-            id="a-1704646563667"
-          ></path>
-        </defs>
-        <use
-          fill-rule="nonzero"
-          opacity=".8"
-          xlink:href="#a-1704646563667"
-        ></use>
-      </svg>
-    </button>
-    <div class="products__carousel-slides">
+  <div class="carousel">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <div class="carousel-container">
       <article class="products__carousel-animals-item">
-        <img class="animals animals-size" src="img/forcats.webp" alt="Cat" />
+        <img class="pet-item" src="img/forcats.webp" alt="forcats">
         <h3>For Cats →</h3>
-        <p>
-          Dry Food • Wet Foods • Treats • Catnip & Grass • Litter Boxes • Bowls
-          & Feeders • Toys • Beds
-        </p>
+        <p>Dry Food • Wet Foods • Treats • Catnip & Grass • Litter Boxes • Bowls
+          & Feeders • Toys • Beds</p>
       </article>
       <article class="products__carousel-animals-item">
-        <img class="animals animals-size" src="img/fordogs.webp" alt="Dog" />
-        <h3 class="animals_fonts">For Dogs →</h3>
-        <p>
-          Dry & Canned Food • Jerky • Chewy Treats • Bowls • Toys • Collars &
-          Leashes • Clothes •
-        </p>
+        <img class="pet-item" src="img/fordogs.webp" alt="fordogs">
+        <h3>For Dogs →</h3>
+        <p>Dry & Canned Food • Jerky • Chewy Treats • Bowls • Toys • Collars &
+          Leashes • Clothes •</p>
       </article>
       <article class="products__carousel-animals-item">
-        <img class="animals animals-size" src="img/forfish.webp" alt="Fish" />
+        <img class="pet-item" src="img/forfish.webp" alt="forfish">
         <h3>For Fish →</h3>
-        <p>
-          Food • Feeders • Aquariums • Filters & Pumps • Cleaning • Water Care •
-          Decor •
-        </p>
+        <p>Food • Feeders • Aquariums • Filters & Pumps • Cleaning • Water Care •
+          Decor •</p>
       </article>
       <article class="products__carousel-animals-item">
-        <img
-          class="animals animals-size"
-          src="img/forhamsters.webp"
-          alt="Hamster"
-        />
-        <h3>For Hamsters →</h3>
-        <p>
-          Food • Soft & Chewy Treats • Litter • Furniture • Collars and Leashes
-          • Bowls • Toys • Beds •
-        </p>
-      </article>
-      <article class="products__carousel-animals-item">
-        <img
-          class="animals animals-size"
-          src="img/forparrots.webp"
-          alt="Parrot"
-        />
-        <h3>For Parrots →</h3>
-        <p>
-          Food • Teats • Cages & Stands • Vitamins • Bowls & Feeders • Litter &
-          Nesting • Odor Control •
-        </p>
-      </article>
-      <article class="products__carousel-animals-item">
-        <img
-          class="animals animals-size"
-          src="img/forrabbits.webp"
-          alt="Rabbit"
-        />
+        <img class="pet-item" src="img/forrabbits.webp" alt="forrabbits">
         <h3>For Rabbits →</h3>
-        <p>
-          Food • Treats • Hay • Cages • Litter & Bedding • Harnesses • Toys •
-          Odor Removers •
-        </p>
+        <p>Food • Treats • Hay • Cages • Litter & Bedding • Harnesses • Toys •
+          Odor Removers •</p>
       </article>
-    <button class="products__carousel-bttn-next">
-      <svg class="arrow-svg_1j4" viewBox="0 0 30 30">
-        <defs>
-          <path
-            d="M19.533 15l-9.1-9.45c-.577-.6-.577-1.5 0-2.1.578-.6 1.445-.6 2.023 0l10.11 10.5c.29.3.434.75.434 1.05 0 .45-.144.75-.433 1.05l-10.111 10.5c-.29.3-.578.45-1.012.45-.433 0-.722-.15-1.01-.45-.578-.6-.578-1.5 0-2.1l9.1-9.45z"
-            id="a-1704646563667"
-          ></path>
-        </defs>
-        <use
-          fill-rule="nonzero"
-          opacity=".8"
-          xlink:href="#a-1704646563667"
-        ></use>
-      </svg>
-    </button>
+      <article class="products__carousel-animals-item">
+        <img class="pet-item" src="img/forparrots.webp" alt="forparrots">
+        <h3>For Parrots →</h3>
+        <p>Food • Teats • Cages & Stands • Vitamins • Bowls & Feeders • Litter &
+          Nesting • Odor Control •</p>
+      </article>
+      <article class="products__carousel-animals-item">
+        <img class="pet-item" src="img/forhamsters.webp" alt="forhamsters">
+        <h3>For Hamsters →</h3>
+        <p>Food • Soft & Chewy Treats • Litter • Furniture • Collars and Leashes
+          • Bowls • Toys • Beds •</p>
+      </article>
+    </div>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
   </div>
 </section>
-<!--</body>
-</html>-->
