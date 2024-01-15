@@ -128,6 +128,7 @@
   text-align: center;
 }
 .image-with-button {
+  display: flex;
   position: relative;
 }
 .redtext {
