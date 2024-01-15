@@ -57,15 +57,15 @@
 }
 .foodbutton {
   position: absolute;
-  top: 80%;
-  left: 20%;
+  top: 70%;
+  left: 15%;
   transform: translate(-50%, -50%);
   margin-top: 24px;
   min-width: 145px;
   min-height: 49px;
   background-color: var(--button-cart-background-color-hover);
   border-radius: 25px;
-  color: var(--button-cart-text-color);
+  color: var(--title-text-color);
   cursor: pointer;
   font-family: "Baloo 2", sans-serif;
   font-size: 16.5px;
@@ -82,7 +82,7 @@
   margin-top: 24px;
   min-width: 145px;
   min-height: 49px;
-  background-color: var(--button-cart-background-color-hover);
+  background-color: var(--title-text-color)
   border-radius: 25px;
   color: var(--button-cart-text-color);
   cursor: pointer;
