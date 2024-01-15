@@ -9,47 +9,72 @@
     <link rel="stylesheet" href="css/item-card-page.css" />
   </head>
   <body>
-    <header><section data-include="index.header.partial.html"></section></header>
+    <header>
+      <section data-include="index.header.partial.html"></section>
+    </header>
     <main>
-      <div class="card-item">
+      <div class="card-item__link-store">
         <a href="storehomepage.html">Store homepage</a>
+      </div>
+      <div class="card-item">
         <div class="card-item__carousel">
-          <button class="card-item__carousel__button-left">
-            <img src="img/left.svg" alt="Button left" />
-          </button>
-          <a href="#"><img width="545" src="img/doggy-fun-set.png" alt="Doggy Fun Set" /></a>
-          <button class="card-item__carousel__button-right"><img src="img/right.svg" alt="Button right"></button>
-          <img height="113" src="img/doggy-fun-set.png" alt="Doggy Fun Set" />
+          <div class="product-media">
+            <div class="product-media__button-left">
+              <button class="card-item__carousel__button-left">
+                <img src="img/left.svg" alt="Button left" />
+              </button>
+            </div>
+            <div class="product-media__img">
+              <a href="#"
+                ><img
+                  width="545"
+                  src="img/doggy-fun-set.png"
+                  alt="Doggy Fun Set"
+              /></a>
+            </div>
+            <div class="product-media__button-right">
+              <button class="card-item__carousel__button-right">
+                <img src="img/right.svg" alt="Button right" />
+              </button>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="card-item__product-template">
-            <div class="card-item__product-template__text-status">In stock</div>
-            <h1 class="card-item__product-template__heading-text">
-              DOGGY Fun Set (2321)
-            </h1>
-            <div class="card-item__product-template__code-item">
-              Product code 23
+        <div class="product-template-block">
+          <div class="product-template">
+            <p class="product-template__status-item">In stock</p>
+            <p class="product-template__name-item">DOGGY Fun Set (2321)</p>
+            <p class="product-template__code-item">Product code 23</p>
+            <p class="product-template__price-item">$6,00</p>
+          </div>
+          <div class="product-template-divider"><hr /></div>
+          <div class="card-item__product-template__bottom-line">
+            <div class="quantity-product">
+              <input
+                type="text"
+                class="quantity-product__input"
+                value="1"
+                data-test="quantity-product__input"
+              />
+              <a class="quantity-product__buy-button" href="#">Add to cart</a>
             </div>
-            <div class="card-item__product-template__price">$6,00</div>
-            <div class="card-item__product-template__bottom-line">
-              <div class="quantity-product">
-                <input type="text" class="quantity-product__input" value="1" data-test="quantity-product__input"/>
-              </div>
-              <button class="quantity-product__buy-button">Add to cart</button>
-            </div>
-            <div class="product-description">
-              <span class="title">DESCRIPTION</span>
-              <div class="product-description__text">
-                This is the perfect set to play with your dog! It includes a
-                safety glove, a strong braided rope, and a toy that is so cool
-                to bite and pull!
-              </div>
+          </div>
+          <div class="product-description">
+            <span class="title">DESCRIPTION</span>
+            <div class="product-description__text">
+              This is the perfect set to play with your dog! It includes a
+              safety glove, a strong braided rope, and a toy that is so cool to
+              bite and pull!
             </div>
           </div>
         </div>
       </div>
+      <div class="product-media__img-mini">
+        <img height="113" src="img/doggy-fun-set.png" alt="Doggy Fun Set" />
+      </div>
     </main>
-    <footer><section data-include="index.footer.partial.html"></section></footer>
+    <footer>
+      <section data-include="index.footer.partial.html"></section>
+    </footer>
     <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
   </body>
 </html>
