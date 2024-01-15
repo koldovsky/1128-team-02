@@ -75,6 +75,7 @@
   padding: 16px 28px;
   border: none;
   cursor: pointer;
+  
 }
 .stuffbutton {
   position: absolute;
@@ -171,4 +172,10 @@
   font-size: 40px;
   color: var(--price-text-color);
   line-height: 40px;
+}
+.foodbutton:hover {
+  background-color: var(--button-cart-background-color-hover);
+}
+.stuffbutton:hover {
+  background-color: var(--button-cart-background-color-hover);
 }
