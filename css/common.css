@@ -12,6 +12,7 @@
   --button-cart-background-color: rgb(178, 231, 233);
   --button-cart-text-color: rgb(69, 193, 199);
   --button-cart-background-color-hover: rgb(255, 230, 212);
+  --background-care-block: rgb(250, 244, 242);
   font-family: "Baloo 2", sans-serif;
   scroll-behavior: smooth;
 }

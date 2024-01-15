@@ -1,0 +1,37 @@
+.care-sections {
+  background-color: var(--background-care-block);
+}
+
+.careblock {
+  max-width: 1438px;
+  margin: auto;
+}
+
+.care-sections__content-img {
+  max-width: 570px;
+  margin: auto;
+  padding: 24px;
+}
+
+.care-sections__content-description {
+  max-width: 570px;
+  margin: auto;
+  padding: 24px;
+}
+
+.care-sections__content-title-text {
+  color: var(--title-text-color);
+  font-size: 1.875rem;
+  font-weight: 700;
+  width: auto;
+}
+
+.care-sections__content-description-bone-icon {
+  max-width: 80px;
+  margin: auto;
+}
+
+.care-sections__content-subtitle-text {
+  color: var(--main-text-color);
+  font-size: 1.188rem;
+}
