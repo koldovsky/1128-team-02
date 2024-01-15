@@ -139,7 +139,7 @@
 }
 .foodtext {
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 10%;
   font-weight: 700;
   font-size: 50px;
@@ -148,7 +148,7 @@
 }
 .foodtextt {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 10%;
   font-weight: 700;
   font-size: 50px;
