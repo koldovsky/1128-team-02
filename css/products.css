@@ -12,14 +12,14 @@
   transition: transform 0.5s ease-in-out;
 }
 
-
 .pet-item {
   width: 200px;
   height: auto;
   border-radius: 50%;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -31,8 +31,12 @@
   outline: none;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
 
 .products__carousel-animals-item {
   border-color: var(--button-cart-background-color-hover);
@@ -64,4 +68,18 @@
   line-height: 16.5px;
   padding: 16px 28px;
   border: none;
+}
+.products_container {
+  display: flex;
+  justify-content: center;
+  gap: 25px; 
+  margin: 50px; 
+}
+.foodpic {
+  max-width: 100%; 
+  height: auto;
+}
+.stuffpic {
+  max-width: 100%; 
+  height: auto;
 }
