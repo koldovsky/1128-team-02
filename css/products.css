@@ -75,7 +75,6 @@
   padding: 16px 28px;
   border: none;
   cursor: pointer;
-  
 }
 .stuffbutton {
   position: absolute;
@@ -101,13 +100,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 25px; 
-  margin: 200px; 
+  gap: 25px;
+  margin: 200px;
 }
 .foodpic {
-  width: 700px; 
+  width: 700px;
   height: 400px;
-  }
+}
 .stuffpic {
   width: 700px;
   height: 400px;
