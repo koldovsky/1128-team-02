@@ -54,7 +54,7 @@
   color: var(--title-text-color);
   line-height: 60px;
   text-align: center;
-  margin-top: -25px;
+  margin-top: -50px;
 }
 .foodbutton {
   position: absolute;
@@ -112,8 +112,8 @@
 .bonelittleimg {
   width: 100px;
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .bestpicks {
   font-weight: 400;
