@@ -87,7 +87,7 @@
   width: 100px;
   margin: auto;
 }
-.best_picks {
-  margin: auto;
-  font-size: large;
+.bestpicks {
+  text-align: center;
+    font-size: large;
 }
