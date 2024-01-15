@@ -174,8 +174,8 @@
   line-height: 40px;
 }
 .foodbutton:hover {
-  background-color: var(--button-cart-background-color-hover);
+  background-color: blue
 }
 .stuffbutton:hover {
-  background-color: var(--button-cart-background-color-hover);
+  background-color: blue;
 }
