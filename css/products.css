@@ -132,14 +132,26 @@
   position: absolute;
   top: 10%;
   left: 10%;
+  color: var(--price-text-color);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
 }
 .foodtext {
   position: absolute;
   top: 20%;
   left: 10%;
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--title-text-color);
+  line-height: 60px;
 }
 .foodtextt {
   position: absolute;
   top: 30%;
   left: 10%;
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--title-text-color);
+  line-height: 60px;
 }
