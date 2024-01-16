@@ -132,7 +132,7 @@
   height: 265px;
   display: flex;
   position: relative;
-  object-fit: cover;
+  
 }
 .redtext {
   position: absolute;
