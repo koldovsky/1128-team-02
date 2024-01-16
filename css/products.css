@@ -104,12 +104,12 @@
   margin: 200px;
 }
 .foodpic {
-  width: 700px;
-  height: 400px;
+  width: auto;
+  height: auto;
 }
 .stuffpic {
-  width: 700px;
-  height: 400px;
+  width: auto;
+  height: auto;
 }
 .bonelittleimg {
   width: 100px;
