@@ -97,6 +97,8 @@
   cursor: pointer;
 }
 .products_container {
+  height: 300px;
+  width: 1550px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,8 +130,8 @@
   text-align: center;
 }
 .image-with-button {
-  width: 646px;
-  height: 265px;
+  width: auto;
+  height: auto;
   display: flex;
   position: relative;
   
