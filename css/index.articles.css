@@ -2,7 +2,8 @@
     text-align: center;
 } 
 .articles__content {
-    text-align: center;  
+    text-align: center;
+    color: #958b7e;  
 }
 .articles__bone {
     width: 120; 
@@ -12,6 +13,9 @@
     margin-right: auto;
 }
 .articles__row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+.articles__image {
+    width: 400px;
 }
