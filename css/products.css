@@ -105,11 +105,11 @@
 }
 .foodpic {
   width: 643px;
-  height: 240px;
+  height: 340px;
 }
 .stuffpic {
   width: 643px;
-  height: 240px;
+  height: 340px;
 }
 .bonelittleimg {
   width: 100px;
@@ -129,7 +129,7 @@
 }
 .image-with-button {
   width: 645px;
-  height: 245px;
+  height: 345px;
   display: flex;
   position: relative;
   object-fit: cover;
