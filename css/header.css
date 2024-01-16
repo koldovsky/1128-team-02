@@ -1,33 +1,36 @@
 
 .header__info{
-    color: red;
    padding: 5px;
    margin: 5px;
 }
 
 .header__data{
-    background-color: rgb(242, 232, 228);
-    color: red;
+    background-color: var(--head-background-color);
+    color: var(--head-main-page-color);
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-inline: -7%;
 }
 
 .header__contacts-info{
     display: flex;   
+    
 }
 
 .header__data .header__contakts{
     text-decoration: none;
-    color: red;
+    color: var(--head-main-page-color);
     margin-right: 20px;
 }
 
 .header__menu{
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
 }
 
@@ -45,19 +48,20 @@
 
 
 .header__nav a {
+    margin-right: 50px;
     font-weight: bold;
-    color: black; 
+    color: var(--head-main-text-color) 
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease, text-decoration 0.3s ease;
+    
 }
 
 .header__nav a::after {
     content: '';
-    display: block;
     width: 0;
     height: 2px; 
-    background-color: black; 
+    background-color: var(--head-main-text-color); 
     position: absolute;
     bottom: 0;
     left: 0;
@@ -73,14 +77,13 @@
 }
 .header__social-icons{
     display: flex;
+    list-style-type: none;
+    margin-left: 10px;
 }
 .header__social-icons img{
-    color: #45c1c7;
-    width: 100px; 
+    margin-right: 15px;
+    width: 30px; 
     height: auto; 
-    padding: 5px;
-    margin: 5px;
-    
 }
 
 
