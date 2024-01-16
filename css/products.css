@@ -97,8 +97,6 @@
   cursor: pointer;
 }
 .products_container {
-  height: 300px;
-  width: 1550px;
   display: flex;
   justify-content: space-between;
   align-items: center;
