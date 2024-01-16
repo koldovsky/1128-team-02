@@ -1,3 +1,8 @@
+.arrivals {
+  margin-top: 110px;
+  margin-bottom: 120px;
+}
+
 .arrivals__title {
   font-size: 50px;
   text-align: center;
@@ -16,20 +21,20 @@
 }
 
 .arrivals__carousel {
-padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .arrivals__carousel-slides {
   padding: 5px;
+  display: flex;
+  flex-direction: row;
 }
 
 .arrivals__carousel-slides-item {
-  padding: 5px;
+  padding: 15px;
   width: 245px;
-}
-
-.arrivals__carousel-slides-item-image {
-  padding: 5px;
 }
 
 .arrivals__carousel-slides-item-name {
