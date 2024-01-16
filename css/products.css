@@ -101,7 +101,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 25px;
-  margin: 100px;
+  margin: 50px;
 }
 .foodpic {
   width: 643px;
@@ -132,8 +132,12 @@
   height: 370px;
   display: flex;
   position: relative;
-
-  
+}
+.image-with-button {
+  width: 630px;
+  height: 370px;
+  display: flex;
+  position: relative;
 }
 .redtext {
   position: absolute;
@@ -167,9 +171,9 @@
   top: 15%;
   left: 5%;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 35px;
   color: var(--title-text-color);
-  line-height: 40px;
+  line-height: 35px;
 }
 .redstufftext {
   font-weight: 700;
