@@ -129,10 +129,10 @@
 }
 .image-with-button {
   width: 645px;
-  height: 345px;
+  height: 370px;
   display: flex;
   position: relative;
-  object-fit: cover;
+
   
 }
 .redtext {
