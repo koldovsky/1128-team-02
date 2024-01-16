@@ -1,8 +1,21 @@
 @import "common.css";
 @import "header.css";
 
+.card-item__page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.card-item__link-store {
+  font-family: "PT Sans";
+  font-size: 1.063rem;
+  font-weight: 400;
+  color: var(--card-page-text-color);
+  display: flex;
+}
+
 .card-item__link-store:hover {
-  color: var(--hover-text-color);
+  color: red;
 }
 
 .card-item {
