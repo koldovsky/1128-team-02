@@ -10,11 +10,12 @@
     font-size: 18px;
     font-family: "Baloo 2", sans-serif;
     color: rgb(142, 142, 142);
+    margin-top: 15px;
 }
 
 .customer-reviews__reviewstitle {
     font-size: 14px;
-    color: rgb(237, 100, 53);
+    color: var(--button-cart-text-color);
     font-family: "PT Sans", sans-serif;
     text-align: center;
     padding-top: 10px;
@@ -38,8 +39,8 @@
 }
 
 .customer-reviews__title-bone {
-    height: 32px;
-    display: block;
+    max-width: 80px;
+    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -51,10 +52,10 @@
 
 .customer-reviews__carousel-slides {
   display: flex;
+  flex-direction: row;
 }
 
 .customer-reviews__carousel-slides-item {
-    flex-direction: row;
     border: 1px solid #f3b250;
     margin: 20px;
     padding: 40px 5px 40px 5px;
@@ -63,14 +64,28 @@
     text-align: center;
 }
 
-.customer-reviews__carousel-btn-prev,
+.customer-reviews__carousel-btn-prev {
+    margin-top: 24px;
+    min-width: 145px;
+    min-height: 49px;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16.5px;
+    font-weight: bold;
+    line-height: 16.5px;
+    padding: 16px 28px;
+    border: none;
+    transform: rotate(180deg);
+}
+
 .customer-reviews__carousel-btn-next {
     margin-top: 24px;
     min-width: 145px;
     min-height: 49px;
-    background-color: var(--button-cart-background-color);
+    background-color: white;
     border-radius: 25px;
-    color: var(--button-cart-text-color);
     cursor: pointer;
     font-family: "PT Sans", sans-serif;
     font-size: 16.5px;
@@ -80,8 +95,10 @@
     border: none;
 }
 
-.customer-reviews__carousel-btn-prev,
-.customer-reviews__carousel-btn-next:hover {
-    background-color: var(--button-cart-background-color-hover);
-    color: var(--price-text-color);
+.customer-reviews__img {
+    border-radius: 500px;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
