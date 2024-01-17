@@ -22,6 +22,7 @@
 
 .trending-products__icon {
   height: 32px;
+  width: fit-content;
 }
 
 .trending-products__description {
