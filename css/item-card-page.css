@@ -15,7 +15,7 @@
 }
 
 .card-item__link-store:hover {
-  color: red;
+  color: var(--hover-text-color);
 }
 
 .card-item {
@@ -73,6 +73,10 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--main-text-color);
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
 }
 
 .product-template-divider {

@@ -5,6 +5,7 @@
 .careblock {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   padding: 100px 15px 35px 15px;
   margin: auto;
 }
@@ -44,6 +45,7 @@
 
 .care-sections__content-body-text {
   color: var(--description-text-color);
+  font-family: "PT Sans";
   font-size: 1.063rem;
   line-height: 27.2px;
   margin-top: 25px;
