@@ -23,7 +23,7 @@
   
   @media (max-width: 768px) {
     .grid__container {
-      grid-template-columns: 1fr; /* Change to one column for screens 768px or smaller */
+      grid-template-columns: 1fr;
     }
   }
 
