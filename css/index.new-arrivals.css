@@ -1,3 +1,8 @@
+.arrivals {
+  margin-top: 110px;
+  margin-bottom: 120px;
+}
+
 .arrivals__title {
   font-size: 50px;
   text-align: center;
@@ -13,6 +18,31 @@
   font-size: 19px;
   text-align: center;
   color: var(--main-text-color);
+}
+
+.arrivals__carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.arrivals__carousel-slides {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.arrivals__carousel-slides-item {
+  padding: 15px;
+  width: 245px;
+}
+
+.arrivals__carousel-slides-item-name {
+color: var(--main-text-color);
+}
+
+.arrivals__carousel-slides-item-price{
+  color: var(--price-text-color);
 }
 
 .arrivals__carousel-slides-item-btn-add {

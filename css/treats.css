@@ -5,4 +5,13 @@
 .treats__description {
     font-weight: 400;
   }
+
+.treats__photo {
+    max-width: 120px;
+    height: auto;
+}
+  
+.treats__title {
+    text-align: center;
+  }
   

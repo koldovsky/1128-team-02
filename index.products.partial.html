@@ -1,5 +1,5 @@
 <section class="products">
- <!-- Future script<script>
+ <script>
     const carousel = document.querySelector(".carousel-container");
     const articles = document.querySelectorAll("article");
     const articleWidth = articles[0].offsetWidth;
@@ -25,21 +25,30 @@
     });
 
     showSlide(currentIndex);
-  </script>-->
+  </script>
   <link rel="stylesheet" href="css/products.css" />
-  <div class="products__food-n-stuff">
-    <img src="img/foodpic.webp" alt="food-pic" />
-    <img src="img/stuffpic.webp" alt="stuff-pic" />
+  <div class="products_container">
+  <div class="image-with-button">
+    <img class="foodpic" src="img/foodpic.webp" alt="food-pic" />
+    <p class="redtext">BUTCHERS, ROYAL CANIN, PEDIGREE</p>
+    <p class="foodtext">Best-Quality</p>
+    <p class="foodtextt">Food for Pets</p>
     <button class="foodbutton" type="button">
-      Buy Now
-    </button>
-    <button class="foodbutton" type="button">
+    Buy Now
+  </button>
+  </div>
+  <div class="image-with-buttonn">
+    <img class="stuffpic" src="img/stuffpic.webp" alt="stuff-pic" />
+    <p class="stufftext">Get <span class="redstufftext">10% </span>Off for Cats & Dogs Stuff</p>
+    <button class="stuffbutton" type="button">
       See products
     </button>
+    </div>
   </div>
-  <h2 class="products__title">Any Products for Any Pets!</h2>
-  <img class="bone" src="img/littlebone.svg" alt="Little Bone" />
-  <p class="best picks">
+  <h2 class="productstitle">Any Products for Any Pets!</h2>
+  <img class="bonelittleimg" src="img/littlebone.svg" alt="Little Bone" />
+  <div class="pickscontent">
+  <p class="bestpicks">
     Best picks for your beloved companions only in Happy Paw.
   </p>
   <div class="carousel">

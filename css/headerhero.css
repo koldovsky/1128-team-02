@@ -1,0 +1,76 @@
+header__hero-logo{
+    position: absolute;
+    bottom: 50px;
+}
+
+.header__hero-text{
+    position: absolute;
+    text-align: left;
+    top: 30%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.header__hero-text h1{
+    font-size: 80px;
+    margin-bottom: -10%;
+}
+
+.header__hero-text p{
+    font-size: 20px;
+    margin-top: 15%;
+}
+
+
+.header__hero-nav{
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+}
+
+
+.header__hero-nav .header__hero-about-us {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: var(--head-hero-button-about-us);
+    color: var(--head-main-page-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .header__hero-nav .header__hero-about-us.round {
+    border-radius: 50%;
+  }
+  
+  .header__hero-nav .header__hero-about-us:hover {
+    background-color:var(--head-hero-button-about-us-hover);
+    color: var(--head-hero-button-about-us-hover-text);
+  }
+
+  .header__hero-nav .header__hero-categories {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: var(--head-hero-button-about-us);
+    color: var(--head-main-page-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .header__hero-nav .header__hero-categories.round {
+    border-radius: 50%;
+  }
+  
+  .header__hero-nav .header__hero-categories:hover {
+    background-color:var(--head-hero-button-about-us-hover);
+    color: white
+  }
+
+  
