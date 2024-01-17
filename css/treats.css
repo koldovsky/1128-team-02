@@ -5,3 +5,8 @@
 .treats__description {
     font-weight: 400;
   }
+
+img {
+    width: 140px;
+    height: auto;
+  }
