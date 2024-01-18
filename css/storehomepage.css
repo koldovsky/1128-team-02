@@ -14,6 +14,7 @@
   --nav-btn-color: #9199ab;
   --nav-btn-dsbl-color: #dfe2e8;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .container {
