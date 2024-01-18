@@ -15,11 +15,19 @@
     text-align: center;
   }
 
-.grid__container {
+  .grid__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  
+  @media (max-width: 768px) {
+    .grid__container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
 
 .bone__treats{
   max-width: 80px;
