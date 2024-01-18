@@ -18,6 +18,12 @@
   --stock-text-color: rgb(97, 168, 84);
   --divider-color: rgb(237, 240, 245);
   --card-page-text-color: rgb(35, 35, 35);
+  --head-main-page-color: rgb(237,100,53);
+  --head-background-color:rgb(242, 232, 228);
+  --head-main-text-color:rgb(0,0,0);
+  --head-hero-button-about-us: rgb(255,230,212);
+  --head-hero-button-about-us-hover:rgb(178,231,233);
+  --head-hero-button-about-us-hover-text:rgb(69,193,199);
   font-family: "Baloo 2", sans-serif;
   scroll-behavior: smooth;
 }
