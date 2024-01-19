@@ -9,7 +9,7 @@
     text-align: center;
     font-size: 18px;
     font-family: "Baloo 2", sans-serif;
-    color: rgb(142, 142, 142);
+    color: var(--description-text-color);
     margin-top: 15px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .customer-reviews__review {
-    color: rgb(142, 142, 142);
+    color: var(--description-text-color);
     font-size: 17px;
     font-family: 'PT Sans', sans-serif;
     padding-top: 20px;
@@ -46,13 +46,9 @@
 }
 
 .customer-reviews__carousel {
-    display: flex;
-    flex-direction: row;
-}
-
-.customer-reviews__carousel-slides {
-  display: flex;
-  flex-direction: row;
+    position: relative;
+    width: 55%;
+    margin: auto;
 }
 
 .customer-reviews__carousel-slides-item {
@@ -65,34 +61,27 @@
 }
 
 .customer-reviews__carousel-btn-prev {
-    margin-top: 24px;
-    min-width: 145px;
-    min-height: 49px;
-    background-color: white;
-    border-radius: 25px;
-    cursor: pointer;
-    font-family: "PT Sans", sans-serif;
-    font-size: 16.5px;
-    font-weight: bold;
-    line-height: 16.5px;
-    padding: 16px 28px;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
     border: none;
-    transform: rotate(180deg);
+    cursor: pointer;
+    background-color: transparent;
+    color: #000;
+    left: -40px;
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .customer-reviews__carousel-btn-next {
-    margin-top: 24px;
-    min-width: 145px;
-    min-height: 49px;
-    background-color: white;
-    border-radius: 25px;
-    cursor: pointer;
-    font-family: "PT Sans", sans-serif;
-    font-size: 16.5px;
-    font-weight: bold;
-    line-height: 16.5px;
-    padding: 16px 28px;
+    position: absolute;
+    top: 51%;
+    transform: translateY(-50%);
+    padding: 10px;
     border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #000;
+    right: -40px;
 }
 
 .customer-reviews__img {
@@ -101,4 +90,10 @@
     height: 100px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.arrow-svg_1j4 {
+    fill: var(--description-text-color);
+    width: 20px;
+    height: 20px;
 }
