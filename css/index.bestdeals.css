@@ -39,9 +39,10 @@
   flex-direction: column;
   justify-content: center; /* Align text to the bottom of the card */
   background-size: cover;
-  background-position: center;
+  background-position: center 60%;
   background-repeat: no-repeat;
   min-height: 300px;
+  
 }
 
 .best-deals__card[data-image="img/aquarium-best-deals.png"] {
