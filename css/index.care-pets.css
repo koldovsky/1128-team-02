@@ -145,6 +145,10 @@
     grid-column-start: auto;
   }
 
+  .content__infoblock {
+    width: 100%;
+  }
+
   .tab {
     margin-top: 50px;
   }

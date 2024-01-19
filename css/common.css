@@ -16,14 +16,17 @@
   --background-care-block: rgb(250, 244, 242);
   --hover-text-color: rgb(255, 0, 0);
   --stock-text-color: rgb(97, 168, 84);
-  --divider-color: rgb(237, 240, 245);
+  --divider-color: rgb(60, 55, 49);
   --card-page-text-color: rgb(35, 35, 35);
-  --head-main-page-color: rgb(237,100,53);
-  --head-background-color:rgb(242, 232, 228);
-  --head-main-text-color:rgb(0,0,0);
-  --head-hero-button-about-us: rgb(255,230,212);
-  --head-hero-button-about-us-hover:rgb(178,231,233);
-  --head-hero-button-about-us-hover-text:rgb(69,193,199);
+  --head-main-page-color: rgb(237, 100, 53);
+  --head-background-color: rgb(242, 232, 228);
+  --head-main-text-color: rgb(0, 0, 0);
+  --head-hero-button-about-us: rgb(255, 230, 212);
+  --head-hero-button-about-us-hover: rgb(178, 231, 233);
+  --head-hero-button-about-us-hover-text: rgb(69, 193, 199);
+  --border-iput-color: rgb(197, 203, 214);
+  --background-quantity-color: rgb(255, 255, 255);
+  --box-shadow: rgba(35, 33, 54, 0.08) 0px 1px 0px 0px;
   font-family: "Baloo 2", sans-serif;
   scroll-behavior: smooth;
 }
