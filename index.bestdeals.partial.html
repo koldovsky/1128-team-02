@@ -1,34 +1,19 @@
-<section class="best-deals">
-  <div class="best-deals__wrapper">
-    <div class="best-deals__aquarium">
-      <div class="best-deals__aquarium-wrapper">
-        <!-- Responsive Design: Consider handling width in CSS for responsiveness -->
-        <img
-          class="best-deals__image"
-          src="img/aquarium-best-deals.png"
-          alt="Aquarium best deals"
-          width="690"
-        />
-      </div>
-      <h2 class="best-deals__title">Save 10% on Aquariums</h2>
-      <!-- Link Accessibility: Consider adding aria-label if necessary -->
-      <div class="best-deals__cta">
-        <a class="best-deals__cta-link" href="#">Discover Now →</a>
-      </div>
+<section class="best-deals__container">
+  <div class="best-deals__list">
+    <div class="best-deals__card" data-image="img/aquarium-best-deals.png">
+      <h2 class="best-deals__title-aquarium">
+        Save <span class="best-deals__title-percent">10% </span>on Aquariums
+      </h2>
+      <a class="best-deals__cta-link" href="#"
+        >Discover Now <span class="best-deals__arrow"> → </span></a
+      >
     </div>
-
-    <div class="best-deals__pets">
-      <div class="best-deals__pets-wrapper">
-        <img
-          class="best-deals__image"
-          src="img/pets-best-deals.png"
-          alt="Best picks for pets"
-          width="690"
-        />
-      </div>
+    <div class="best-deals__card" data-image="img/pets-best-deals.png">
       <p class="best-deals__category">TOYS, TREATS & LEASHES</p>
-      <h2 class="best-deals__title">Best Picks for Your Pets</h2>
-      <p class="best-deals__price"><em>from $1.99</em></p>
+      <h2 class="best-deals__title-pets">Best Picks for Your Pets</h2>
+      <p class="best-deals__price">
+        <em>from <span class="best-deals__price-text">$1.99</span></em>
+      </p>
       <div class="best-deals__button">
         <a class="best-deals__button-link" href="#">
           <span class="best-deals__button-content"> Learn More </span>

@@ -1,5 +1,124 @@
-.best-deals {
-    color: #fbf4f2;
-    display: flex;
-    margin: auto;
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+.best-deals__container {
+  background-color: rgb(250, 244, 242);
+  font-family: "Baloo 2", cursive;
+  padding: 20px; /* Adding space inside the container */
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+
+.best-deals__list {
+  display: grid; /* Setting up grid layout */
+  grid-template-columns: 1fr; /* Default: stack cards in a single column */
+  gap: 20px; /* Adding space between grid items */
+  min-height: 300px;
+}
+
+/* Media query for large screens */
+@media (min-width: 768px) {
+  /* Adjust this value based on your breakpoint needs */
+  .best-deals__list {
+    grid-template-columns: 1fr 1fr; /* On large screens: place cards in two columns */
+    min-height: 400px;
+  }
+
+  .best-deals__card {
+    max-width: 100%; /* Allows cards to be responsive within the grid */
+  }
+}
+
+/* Styling for each best deal card */
+.best-deals__card {
+  background-color: white; /* Making the card background white */
+  margin: 24px; /* Adding space around each card */
+  overflow: hidden; /* Ensuring content doesn't spill out of card borders */
+  padding: 20px; /* Add padding inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align text to the bottom of the card */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+}
+
+.best-deals__card[data-image="img/aquarium-best-deals.png"] {
+  background-image: url(../img/aquarium-best-deals.png);
+  overflow: clip;
+}
+
+.best-deals__card[data-image="img/pets-best-deals.png"] {
+  background-image: url(../img/pets-best-deals.png);
+  overflow: clip;
+}
+
+/* Styling for the titles in the cards */
+.best-deals__title-aquarium {
+  font-size: 30px; /* Setting the font size for titles */
+  margin: 10px; /* Adding space around the title */
+  font-weight: bold;
+  color: #3c3733;
+  text-align: center;
+}
+
+.best-deals__title-pets {
+  font-size: 30px; /* Setting the font size for titles */
+  margin: 10px; /* Adding space around the title */
+  font-weight: bold;
+  color: #3c3733;
+}
+
+/* Styling for the category and price paragraphs */
+.best-deals__category,
+.best-deals__price {
+  margin: 10px; /* Adding space around the text */
+  color: #555; /* Slightly lighter text color for these elements!!!!!! */
+  font-family: sans-serif;
+}
+
+/* Styling for the call-to-action and button links */
+.best-deals__cta-link {
+  color: var(--card-page-text-color);
+  font-size: 17px;
+  cursor: pointer;
+  text-align: center;
+  font-family: sans-serif;
+  transition: color 0.1s;
+}
+.best-deals__arrow {
+  color: var(--button-cart-text-color);
+}
+.best-deals__cta-link:hover {
+  text-decoration: underline; /* Підкреслення тексту при наведенні */
+  color: var(--price-text-color);
+}
+
+.best-deals__button-link {
+  display: inline-block; /* Making the link behave like a block for styling */
+  border: 2px solid var(--price-text-color);
+  color: var(--price-text-color);
+  border-color: var(
+    --price-text-color
+  ); /* Bright blue background for visibility */
+  padding: 10px 20px; /* Padding inside the button for spacing */
+  border-radius: 8px; /* rounded corners for the button */
+  margin: 10px; /* Space around the button */
+  text-decoration: none; /* Removing underline from links */
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the links */
+.best-deals__button-link:hover {
+  background-color: var(
+    --price-text-color
+  ); /* Darkening the button on hover for interaction feedback */
+  color: white;
+}
+
+.best-deals__price-text,
+.best-deals__title-percent {
+  color: var(--price-text-color);
 }
