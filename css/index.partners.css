@@ -1,0 +1,78 @@
+.partners {
+  width: 100%; /* Full width to contain the carousel */
+  overflow: hidden; /* Ensures that anything outside of this container is not shown */
+  position: relative; /* For absolute positioning of navigation buttons */
+  background-color: rgb(250, 244, 242);
+  padding-top: 30px;
+  padding-bottom: 90px;
+}
+
+/* Carousel Slides Wrapper Styles */
+.partners__carousel-slides {
+  display: flex; /* Layout the slides in a horizontal row */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for sliding effect */
+}
+
+/* Container for individual carousel items */
+.partners__carousel-slides-item {
+  width: 261px; /* Set a fixed width for each slide item */
+  height: 120px; /* Set a fixed height for each slide item */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  margin-right: 10px; /* Half of the total gap you want between items */
+  margin-left: 10px; /* Half of the total gap you want between items */
+  background-color: #ffe6d4; /* Background color for each item */
+}
+
+/* Styles for each image within the carousel slide item */
+.partners__carousel-slides-item img {
+  max-width: 100%; /* Ensure the image is not wider than the container */
+  max-height: 100%; /* Ensure the image is not taller than the container */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio without cropping */
+}
+
+/* Styles for Previous and Next Navigation Buttons */
+.partners__carousel-btn-prev,
+.partners__carousel-btn-next {
+  position: absolute; /* Position the buttons over the carousel */
+  top: 50%; /* Align buttons vertically to the middle of the carousel */
+  transform: translateY(
+    -50%
+  ); /* Offset the button by half its height to truly center it */
+  background: none; /* No background for the button, can be set to any color or remain transparent */
+  border: none; /* No border for a clean look, can be styled if needed */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+}
+
+.partners__carousel-btn-prev .arrow-svg_1j4 {
+  transform: rotate(180deg); /* Rotates the SVG to point to the right */
+}
+
+/* Specific Positioning for the Previous Button */
+.partners__carousel-btn-prev {
+  left: 10px; /* Position from the left edge of the carousel */
+}
+
+/* Specific Positioning for the Next Button */
+.partners__carousel-btn-next {
+  right: 10px; /* Position from the right edge of the carousel */
+}
+
+/* SVG Arrow Styles */
+.arrow-svg_1j4 {
+  fill: #333; /* Color of the arrow */
+  width: 30px; /* Width of the arrow, adjust as necessary */
+  height: 30px; /* Height of the arrow, adjust as necessary */
+}
+
+/* Hover Effect for Navigation Buttons */
+.partners__carousel-btn-prev:hover,
+.partners__carousel-btn-next:hover {
+  background-color: #333;
+  border-radius: 20px;
+}
+
+.arrow-svg_1j4:hover {
+  fill: black;
+}
