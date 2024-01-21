@@ -12,20 +12,20 @@
     <header>
       <section data-include="index.header.partial.html"></section>
     </header>
-    <main>
-      <div class="card-item__page container">
-        <div class="card-item__link-store">
+    <main class="main-content">
+      <div class="card-page container">
+        <div class="card-page__back-link">
           <a href="storehomepage.html">Store homepage</a>
         </div>
-        <div class="card-item">
+        <article class="card-item">
           <div class="card-item__carousel">
             <div class="product-media">
               <div class="product-media__button-left">
-                <button class="card-item__carousel__button-left">
+                <button class="carousel__button carousel__button--left">
                   <img src="img/left.svg" alt="Button left" />
                 </button>
               </div>
-              <div class="product-media__img">
+              <div class="carousel__image">
                 <a href="#"
                   ><img
                     width="545"
@@ -34,45 +34,60 @@
                 /></a>
               </div>
               <div class="product-media__button-right">
-                <button class="card-item__carousel__button-right">
+                <button class="carousel__button carousel__button--right">
                   <img src="img/right.svg" alt="Button right" />
                 </button>
               </div>
             </div>
           </div>
-          <div class="product-template-block">
+          <section class="card-item__details">
             <div class="product-template">
-              <p class="product-template__status-item">In stock</p>
-              <p class="product-template__name-item">DOGGY Fun Set (2321)</p>
-              <p class="product-template__code-item">Product code 23</p>
-              <p class="product-template__price-item">$6,00</p>
+              <p class="details__title">In stock</p>
+              <p class="details__status">DOGGY Fun Set (2321)</p>
+              <p class="details__code">Product code 23</p>
+              <p class="details__price">$6,00</p>
             </div>
-            <div class="product-template-divider"><hr /></div>
+            <div class="product-template-divider">
+              <hr class="details__divider" />
+            </div>
             <div class="card-item__product-template__bottom-line">
               <div class="quantity-product">
-                <input
-                  type="number"
-                  class="quantity-product__input"
-                  min="1"
-                  max="100"
-                  value="1"
-                />
-                <a class="quantity-product__buy-button" href="#">Add to cart</a>
+                <div class="details__purchase">
+                  <input
+                    type="number"
+                    class="purchase__quantity-input"
+                    value="1"
+                    data-test="quantity-input"
+                  />
+                  <div class="purchase__quantity-buttons">
+                    <img
+                      class="button-up"
+                      src="img/button-up.svg"
+                      alt="Button Up"
+                    />
+                    <img
+                      class="button-down"
+                      src="img/button-down.svg"
+                      alt="Button Down"
+                    />
+                  </div>
+                </div>
+                <button class="purchase__buy-button">Add to cart</button>
               </div>
             </div>
-            <div class="product-description">
-              <span class="title">DESCRIPTION</span>
-              <div class="product-description__text">
+            <div class="details__description">
+              <h3 class="description__title">DESCRIPTION</h3>
+              <p class="description__text">
                 This is the perfect set to play with your dog! It includes a
                 safety glove, a strong braided rope, and a toy that is so cool
                 to bite and pull!
-              </div>
+              </p>
             </div>
+          </section>
+          <div class="card-item__thumbnail">
+            <img height="113" src="img/doggy-fun-set.png" alt="Doggy Fun Set" />
           </div>
-        </div>
-        <div class="product-media__img-mini">
-          <img height="113" src="img/doggy-fun-set.png" alt="Doggy Fun Set" />
-        </div>
+        </article>
       </div>
     </main>
     <footer>
