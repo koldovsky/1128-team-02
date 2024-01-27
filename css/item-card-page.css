@@ -14,7 +14,7 @@
   display: flex;
 }
 
-.card-item__link-store:hover {
+.card-page__store-link:hover {
   color: var(--hover-text-color);
 }
 
@@ -75,22 +75,40 @@
   color: var(--main-text-color);
 }
 
-.quantity-input {
-  display: inline-flex;
-  max-width: 128px;
-  border-color: var(--border-iput-color);
-  border: 0.66px;
-  align-items: center;
-  justify-content: center;
-  width: 65px;
-  height: 37px;
+.product-template-divider {
+  background: var(--background-divider-color);
+  border: 0px solid rgb(60, 55, 49);
+  box-sizing: border-box;
+  color: var(--divider-color);
+  display: block;
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  height: 1px;
+  line-height: 27.2px;
+  margin: 24px 0;
+  overflow-wrap: break-word;
+  padding: 0;
+  text-align: left;
+  vertical-align: baseline;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
-input[type="number"] {
+.quantity-input {
+  display: inline-flex;
+  width: 65px;
+  height: 37px;
+  border: 0.66px solid var(--border-iput-color);
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.purchase__quantity-input {
   border: none;
-  width: 43px;
+  width: 31px;
   height: 20px;
-  -moz-appearance: textfield;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -102,7 +120,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .product-template-divider {
   width: 461px;
   color: var(--divider-color);
-  margin: 24px 0px 24px 0px;
+  margin: 24px 0 24px 0;
 }
 
 .quantity-product {
@@ -112,72 +130,59 @@ input[type="number"]::-webkit-outer-spin-button {
 .details__purchase {
   width: 66px;
   height: 33px;
-  /* background-attachment: scroll;
-  background-clip: border-box;
-  background-color: var(--background-quantity-color);
-  background-image: none;
-  background-origin: padding-box;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  background-repeat: repeat;
-  block-size: auto; */
-  border-bottom-color: var(--border-iput-color);
-  border-bottom-width: 0.66px;
-  border-bottom-style: solid;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-image-outset: 0;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-color: var(--border-iput-color);
-  border-left-width: 0.66px;
-  border-left-style: solid;
-  border-right-color: var(--border-iput-color);
-  border-right-width: 0.66px;
-  border-right-style: solid;
-  border-top-color: var(border-top);
-  border-top-width: 0.66px;
-  border-top-style: solid;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border: 0.66px solid var(--border-iput-color);
+  border-radius: 3px;
   box-shadow: var(--box-shadow);
   box-sizing: border-box;
   color: var(--title-text-color);
   display: flex;
-  font-family: "PT Sans", sans-serif;
-  font-feature-settings: normal;
-  font-kerning: auto;
-  font-optical-sizing: auto;
-  font-size: 17px;
-  font-stretch: 100%;
-  font-style: normal;
-  font-variant-alternates: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant: normal;
-  font-variant-position: normal;
-  font-variation-settings: normal;
-  font-weight: 400;
-  max-width: 128px;
-  display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  max-width: 128px;
+  overflow: hidden;
+  margin: 0 16px 0 0;
+}
+
+.details__inner {
+  display: flex;
+  padding: 8px 12px 8px 12px;
+  border: 0.667px;
 }
 
 .purchase__quantity-buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 10px;
 }
 
 .button-down {
-  transform: matrix(-1, 0, 0, -1, 0, 0);
+  transform: rotate(180deg);
 }
 
 .purchase__buy-button {
+  border: none;
+  border-radius: 20px;
+  background-color: var(--head-hero-button-about-us);
+  color: var(--price-text-color);
+  width: 100%;
+  box-sizing: border-box;
+  height: 37px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  display: block;
+}
+
+.purchase__buy-button:hover {
+  color: var(--head-hero-button-about-us-hover-text);
+  background-color: var(--background-color-button-add-hover);
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease-in, background-color 0.2s ease-in,
+    border-color 0.2s ease-in, box-shadow 0.2s ease-in;
 }
 
 @media (max-width: 767px) {
