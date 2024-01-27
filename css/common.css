@@ -26,6 +26,8 @@
   --head-hero-button-about-us-hover-text: rgb(69, 193, 199);
   --border-iput-color: rgb(197, 203, 214);
   --background-quantity-color: rgb(255, 255, 255);
+  --background-divider-color: rgb(237, 240, 245);
+  --background-color-button-add-hover: rgb(69, 193, 199, 0.4);
   --box-shadow: rgba(35, 33, 54, 0.08) 0px 1px 0px 0px;
   font-family: "Baloo 2", sans-serif;
   scroll-behavior: smooth;

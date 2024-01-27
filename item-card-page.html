@@ -15,7 +15,9 @@
     <main class="main-content">
       <div class="card-page container">
         <div class="card-page__back-link">
-          <a href="storehomepage.html">Store homepage</a>
+          <a clas="card-page__store-link" href="storehomepage.html"
+            >Store homepage</a
+          >
         </div>
         <article class="card-item">
           <div class="card-item__carousel">
@@ -47,36 +49,39 @@
               <p class="details__code">Product code 23</p>
               <p class="details__price">$6,00</p>
             </div>
-            <div class="product-template-divider">
-              <hr class="details__divider" />
-            </div>
+            <div class="product-template-divider"></div>
             <div class="card-item__product-template__bottom-line">
               <div class="quantity-product">
                 <div class="details__purchase">
-                  <input
-                    type="number"
-                    class="purchase__quantity-input"
-                    value="1"
-                    data-test="quantity-input"
-                  />
-                  <div class="purchase__quantity-buttons">
-                    <img
-                      class="button-up"
-                      src="img/button-up.svg"
-                      alt="Button Up"
+                  <div class="details__inner">
+                    <input
+                      type="number"
+                      class="purchase__quantity-input"
+                      value="1"
+                      data-test="quantity-input"
                     />
-                    <img
-                      class="button-down"
-                      src="img/button-down.svg"
-                      alt="Button Down"
-                    />
+                    <div class="purchase__quantity-buttons">
+                      <img
+                        class="button-up"
+                        src="img/button-up.svg"
+                        alt="Button Up"
+                      />
+                      <img
+                        class="button-down"
+                        src="img/button-down.svg"
+                        alt="Button Down"
+                      />
+                    </div>
                   </div>
                 </div>
                 <button class="purchase__buy-button">Add to cart</button>
               </div>
             </div>
             <div class="details__description">
-              <h3 class="description__title">DESCRIPTION</h3>
+              <div class="description__title">
+                <h3 class="description__title">DESCRIPTION</h3>
+              </div>
+
               <p class="description__text">
                 This is the perfect set to play with your dog! It includes a
                 safety glove, a strong braided rope, and a toy that is so cool
