@@ -213,7 +213,7 @@ const products = [
   {
     id: "31",
     link: "#",
-    image: "img/vegafishcastle.pn",
+    image: "img/vegafishcastle.png",
     title: "VEGA Fish Castle",
     price: "$6,00",
   },
@@ -263,12 +263,30 @@ function renderProducts(products) {
   document.querySelector(".prodlist").innerHTML = productsDomString;
 }
 
-renderProducts(products);
 
+const selectProdPerPage = document.querySelector('.navprodperpage-select');
 
-function getProdsPerPage() {
-    print(document.querySelector('.navprodperpage-select').value);
+let displayProdPerPage = selectProdPerPage.options[selectProdPerPage.selectedIndex].value;
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('limit')) {
+    displayProdPerPage = urlParams.get('limit')
 }
 
-console.log(getProdsPerPage());
-// const prodsPerPage = 
+renderProducts(products.slice(0, displayProdPerPage));
+
+for (const option of selectProdPerPage.options) {
+    if (option.value === displayProdPerPage) {
+        option.selected = true;
+    } else {
+        option.selected = false;
+    }
+}
+
+selectProdPerPage.addEventListener('change', (event) => {
+    let displayProdPerPage = event.target.value;
+    renderProducts(products.slice(0, displayProdPerPage))
+    if (window.location.pathname.endsWith('/storehomepage')) {
+        window.location.search = `?limit=${displayProdPerPage}`
+    }
+});
