@@ -1,3 +1,4 @@
+
 const products = [
   {
     id: "1",
@@ -242,7 +243,7 @@ const products = [
 function renderProducts(products) {
   let productsDomString = "";
   for (const product of products) {
-    productsDomString += (
+    productsDomString += `
       <article class="prodlist-item">
         <a href="${product.link}">
           <img
@@ -257,7 +258,17 @@ function renderProducts(products) {
         <p class="prodlist-item-price">${product.price}</p>
         <button class="prodlist-item-buybtn">Buy</button>
       </article>
-    );
+    `
   }
   document.querySelector(".prodlist").innerHTML = productsDomString;
 }
+
+renderProducts(products);
+
+
+function getProdsPerPage() {
+    print(document.querySelector('.navprodperpage-select').value);
+}
+
+console.log(getProdsPerPage());
+// const prodsPerPage = 
