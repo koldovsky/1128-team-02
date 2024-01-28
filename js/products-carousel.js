@@ -9,7 +9,9 @@ let carouselWidth = carousel.offsetWidth;
 showSlide(currentIndex);
 
 function showSlide(index) {
-    carousel.style.transform = `translateX(-${index * (100 / getVisibleSlides())}%)`;
+    if (carousel) {
+        carousel.style.transform = `translateX(-${index * (100 / getVisibleSlides())}%)`;
+    }
 }
 
 function nextSlide() {
@@ -26,8 +28,10 @@ function prevSlide() {
     }
 }
 
-prevButton.addEventListener('click', prevSlide);
-nextButton.addEventListener('click', nextSlide);
+if (prevButton && nextButton) {
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+}
 
 function getVisibleSlides() {
     if (window.innerWidth >= 1200) {
@@ -40,6 +44,8 @@ function getVisibleSlides() {
 }
 
 window.addEventListener('resize', () => {
-    carouselWidth = carousel.offsetWidth;
-    showSlide(currentIndex);
+    if (carousel) {
+        carouselWidth = carousel.offsetWidth;
+        showSlide(currentIndex);
+    }
 });
