@@ -4,7 +4,7 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 
 let currentIndex = 0;
-let carouselWidth = carousel.offsetWidth;
+let carouselWidth = carousel ? carousel.offsetWidth : 0;
 
 showSlide(currentIndex);
 

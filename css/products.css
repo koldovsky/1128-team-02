@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-food-n-stuff css .productstitle {
+
+.food-n-stuff .productstitle {
   font-weight: 700;
   font-size: 50px;
   color: var(--title-text-color);
@@ -11,46 +12,37 @@ food-n-stuff css .productstitle {
   text-align: center;
   margin-top: -50px;
 }
-.foodbutton {
+
+.foodbutton,
+.stuffbutton {
   position: absolute;
+  min-width: 145px;
+  min-height: 49px;
+  background-color: var(--button-cart-background-color-hover);
+  border-radius: 25px;
+  color: var(--price-text-color);
+  cursor: pointer;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 16.5px;
+  padding: 16px 28px;
+  border: none;
+  cursor: pointer;
+}
+
+.foodbutton {
   top: 70%;
   left: 17%;
   transform: translate(-50%, -50%);
-  margin-top: 24px;
-  min-width: 145px;
-  min-height: 49px;
-  background-color: var(--button-cart-background-color-hover);
-  border-radius: 25px;
-  color: var(--price-text-color);
-  cursor: pointer;
-  font-family: "Baloo 2", sans-serif;
-  font-size: 16.5px;
-  font-weight: bold;
-  line-height: 16.5px;
-  padding: 16px 28px;
-  border: none;
-  cursor: pointer;
 }
+
 .stuffbutton {
-  position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 24px;
-  min-width: 145px;
-  min-height: 49px;
-  background-color: var(--button-cart-background-color-hover);
-  border-radius: 25px;
-  color: var(--price-text-color);
-  cursor: pointer;
-  font-family: "Baloo 2", sans-serif;
-  font-size: 16.5px;
-  font-weight: bold;
-  line-height: 16.5px;
-  padding: 16px 28px;
-  border: none;
-  cursor: pointer;
 }
+
 .products_container {
   display: flex;
   justify-content: space-between;
@@ -58,20 +50,20 @@ food-n-stuff css .productstitle {
   gap: 25px;
   margin: 50px;
 }
-.foodpic {
-  width: 643px;
-  height: 340px;
-}
+
+.foodpic,
 .stuffpic {
   width: 643px;
   height: 340px;
 }
+
 .bonelittleimg {
   width: 100px;
   margin: auto;
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
 .bestpicks {
   font-weight: 400;
   font-size: 20px;
@@ -79,11 +71,13 @@ food-n-stuff css .productstitle {
   line-height: 30px;
   text-align: center;
 }
+
 .productstitle {
   text-align: center;
 }
+
 .image-with-button {
-  width: 645px;
+  width: 645px; 
   height: 370px;
   display: flex;
   position: relative;
@@ -94,6 +88,7 @@ food-n-stuff css .productstitle {
   display: flex;
   position: relative;
 }
+
 .redtext {
   position: absolute;
   top: 15%;
@@ -103,24 +98,26 @@ food-n-stuff css .productstitle {
   font-weight: bold;
   line-height: 20px;
 }
-.foodtext {
-  position: absolute;
-  top: 25%;
-  left: 7%;
-  font-weight: 700;
-  font-size: 60px;
-  color: var(--title-text-color);
-  line-height: 60px;
-}
+
+.foodtext,
 .foodtextt {
   position: absolute;
-  top: 40%;
-  left: 7%;
   font-weight: 700;
   font-size: 60px;
   color: var(--title-text-color);
   line-height: 60px;
 }
+
+.foodtext {
+  top: 25%;
+  left: 7%;
+}
+
+.foodtextt {
+  top: 40%;
+  left: 7%;
+}
+
 .stufftext {
   position: absolute;
   top: 15%;
@@ -130,15 +127,15 @@ food-n-stuff css .productstitle {
   color: var(--title-text-color);
   line-height: 35px;
 }
+
 .redstufftext {
   font-weight: 700;
   font-size: 40px;
   color: var(--price-text-color);
   line-height: 40px;
 }
-.foodbutton:hover {
-  background-color: var(--button-cart-background-color);
-}
+
+.foodbutton:hover,
 .stuffbutton:hover {
   background-color: var(--button-cart-background-color);
 }
@@ -178,6 +175,7 @@ food-n-stuff css .productstitle {
 .prev {
   left: 0;
 }
+
 .next {
   right: 0;
 }
