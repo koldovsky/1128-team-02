@@ -35,13 +35,14 @@ if (prevButton && nextButton) {
 
 function getVisibleSlides() {
     if (window.innerWidth >= 1200) {
-        return 3;
+        return 4;
     } else if (window.innerWidth >= 768) {
         return 2;
     } else {
         return 1;
     }
 }
+
 
 window.addEventListener('resize', () => {
     if (carousel) {
