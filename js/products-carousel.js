@@ -4,16 +4,16 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 
 let currentIndex = 0;
-let carouselWidth = carousel.offsetWidth;
+let slideWidth = slides[0].offsetWidth; // Змінено з carousel.offsetWidth на slides[0].offsetWidth
 
 showSlide(currentIndex);
 
 function showSlide(index) {
-    carousel.style.transform = `translateX(-${index * (100 / getVisibleSlides())}%)`;
+    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
 }
 
 function nextSlide() {
-    if (currentIndex < slides.length - getVisibleSlides()) {
+    if (currentIndex < slides.length - 1) {
         currentIndex++;
         showSlide(currentIndex);
     }
@@ -29,12 +29,3 @@ function prevSlide() {
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
 
-function getVisibleSlides() {
-    if (window.innerWidth >= 1024) {
-        return 3; 
-    } else if (window.innerWidth >= 768) {
-        return 2; 
-    } else {
-        return 1; 
-    }
-}
