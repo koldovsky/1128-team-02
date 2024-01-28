@@ -20,23 +20,17 @@
   min-height: 49px;
   background-color: var(--button-cart-background-color-hover);
   border-radius: 25px;
-  color: var(--price-text-color);
   cursor: pointer;
-  font-family: "Baloo 2", sans-serif;
-  font-size: 16.5px;
-  font-weight: bold;
-  line-height: 16.5px;
-  padding: 16px 28px;
   border: none;
   cursor: pointer;
 }
 
 .stuffbuttontext .foodbuttontext {
-  color: var(--price-text-color);
   font-family: "Baloo 2", sans-serif;
   font-size: 16.5px;
   font-weight: bold;
   line-height: 16.5px;
+  color: var(--price-text-color);
 }
 
 .foodbutton {
