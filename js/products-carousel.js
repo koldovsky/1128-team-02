@@ -1,19 +1,19 @@
-const carousel = document.querySelector('.carousel-container');
+const carousel = document.querySelector('.carousel');
 const slides = document.querySelectorAll('.products__carousel-animals-item');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 
 let currentIndex = 0;
-let slideWidth = slides[0].offsetWidth; // Змінено з carousel.offsetWidth на slides[0].offsetWidth
+let carouselWidth = carousel.offsetWidth;
 
 showSlide(currentIndex);
 
 function showSlide(index) {
-    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+    carousel.style.transform = `translateX(-${index * (100 / getVisibleSlides())}%)`;
 }
 
 function nextSlide() {
-    if (currentIndex < slides.length - 1) {
+    if (currentIndex < slides.length - getVisibleSlides()) {
         currentIndex++;
         showSlide(currentIndex);
     }
@@ -29,3 +29,17 @@ function prevSlide() {
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
 
+function getVisibleSlides() {
+    if (window.innerWidth >= 1200) {
+        return 3;
+    } else if (window.innerWidth >= 768) {
+        return 2;
+    } else {
+        return 1;
+    }
+}
+
+window.addEventListener('resize', () => {
+    carouselWidth = carousel.offsetWidth;
+    showSlide(currentIndex);
+});
