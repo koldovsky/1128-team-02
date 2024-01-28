@@ -9,7 +9,7 @@ let carouselWidth = carousel.offsetWidth;
 showSlide(currentIndex);
 
 function showSlide(index) {
-    carousel.style.transform = translateX(-${index * (100 / getVisibleSlides())}%);
+    carousel.style.transform = `translateX(-${index * (100 / getVisibleSlides())}%)`;
 }
 
 function nextSlide() {
