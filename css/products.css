@@ -31,6 +31,13 @@
   cursor: pointer;
 }
 
+.stuffbuttontext .foodbuttontext {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 16.5px;
+}
+
 .foodbutton {
   top: 70%;
   left: 17%;
