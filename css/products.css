@@ -32,6 +32,7 @@
 }
 
 .stuffbuttontext .foodbuttontext {
+  color: var(--price-text-color);
   font-family: "Baloo 2", sans-serif;
   font-size: 16.5px;
   font-weight: bold;
