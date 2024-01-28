@@ -1,4 +1,4 @@
-/*carousel css*/
+/*carousel css
 
 .carousel {
   position: relative;
@@ -47,7 +47,7 @@
   text-align: center;
 }
 
-/*food-n-stuff css*/
+food-n-stuff css
 .productstitle {
   font-weight: 700;
   font-size: 50px;
@@ -187,3 +187,61 @@
 .stuffbutton:hover {
   background-color: var(--button-cart-background-color);
 }
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.pet-item {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--button-cart-text-color);
+  border: none;
+  outline: none;
+  background: none;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+.products__carousel-animals-item {
+  border-color: var(--button-cart-background-color-hover);
+  border-width: 1px;
+  border-style: solid;
+  width: 250px;
+  margin: 0 25px;
+  text-align: center;
+}
+
+
