@@ -1,7 +1,7 @@
 <section class="articles">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <div class="article__header">
-    <h2 class="articles__title">Our News & Articles</h2>
+    <h2 class="articles__title" onmouseover="secretText(this)" onmouseout="originalText(this)">Our News & Articles</h2>
     <img class="articles__bone" src="img/bone.svg" alt="Bone">
     <p class="articles__content">Everything you need to know about caring for your pet.</p>
   </div>
@@ -13,7 +13,7 @@
             <h3 class="articles__header__content">How to Select an Aquarium?</h3>
             <p class="articles__info__content">Our experts tell how to select your first aquarium and why a big tank doesn't mean a good one.</p>
             <div class="articles__link__container">
-              <a class="articles__link" href="#"><b>Read More→</b></a>
+              <a class="articles__link" href="#" onmouseover="bigLink(this)" onmouseout="smallLink(this)"><b>Read More→</b></a>
             </div>
           </figcaption>
         </figure>
@@ -25,7 +25,7 @@
             <h3 class="articles__header__content">Picking the Right Feeder</h3>
             <p class="articles__info__content">How to choose a perfect bowl for your pet to eat safely and comfortably? </p>
             <div class="articles__link__container">
-              <a class="articles__link" href="#"><b>Read More→</b></a>
+              <a class="articles__link" href="#" onmouseover="bigLink(this)" onmouseout="smallLink(this)"><b>Read More→</b></a>
             </div>
           </figcaption>
         </figure>
@@ -37,11 +37,11 @@
             <h3 class="articles__header__content">Are You Ready to Adopt a Rabbit?</h3>
             <p class="articles__info__content">Let's check what you really know about rabbits and how to care for them at home.<p>
             <div class="articles__link__container">
-              <a class="articles__link" href="#"><b>Read More→</b></a>
+              <a class="articles__link" href="#" onmouseover="bigLink(this)" onmouseout="smallLink(this)"><b>Read More→</b></a>
             </div>
           </figcaption>
         </figure>
       </div>
     </div>
-    
+    <script src="js/articles.js"></script>
 </section> 
