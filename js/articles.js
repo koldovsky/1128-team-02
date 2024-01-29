@@ -1,8 +1,8 @@
-function secretText(page) {
+function secretText() {
     const articlesTitle = document.querySelector(".articles__title");
     articlesTitle.innerText = "First Project";
   }
-  function originalText(page) {
+  function originalText() {
     const articlesTitle = document.querySelector(".articles__title");
     articlesTitle.innerText = "Our News & Articles";
   }
