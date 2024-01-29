@@ -1,4 +1,4 @@
-let currentIndex = 0;
+let currentSlideIndex = 0;
 const slides = document.querySelectorAll('.products__carousel-animals-item');
 const totalSlides = slides.length;
 
@@ -13,19 +13,20 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    currentIndex++;
-    if (currentIndex >= totalSlides) {
-        currentIndex = 0;
+    currentSlideIndex++;
+    if (currentSlideIndex >= totalSlides) {
+        currentSlideIndex = 0;
     }
-    showSlide(currentIndex);
+    showSlide(currentSlideIndex);
 }
 
 function prevSlide() {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = totalSlides - 1;
+    currentSlideIndex--;
+    if (currentSlideIndex < 0) {
+        currentSlideIndex = totalSlides - 1;
     }
-    showSlide(currentIndex);
+    showSlide(currentSlideIndex);
 }
 
-showSlide(currentIndex);
+// Показуємо перший слайд початково
+showSlide(currentSlideIndex);
