@@ -4,4 +4,5 @@ document.addEventListener("partialsLoaded", () => {
     import('./products-carousel.js');
     import('./burger-menu.js');
     import('./reviews-carousel.js');
+    import('./articles.js');
 });
