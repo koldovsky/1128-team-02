@@ -51,12 +51,11 @@ prevButton.addEventListener('click', () => {
 });
 
 nextButton.addEventListener('click', () => {
-    carouselInner.style.transition = ''; // Ensure transition is not 'none'
+    carouselInner.style.transition = ''; 
     if (++currentIndex >= slides.length - slidesPerView) {
         currentIndex = slidesPerView;
         carouselInner.style.transition = 'none';
         updateCarousel();
-        // Allow transition to complete, then reset transition style
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
                 carouselInner.style.transition = '';
