@@ -141,6 +141,7 @@
   position: relative;
   overflow: hidden;
   max-width: 1000px;
+  max-height: min-content;
   margin: 20px auto;
 }
 
