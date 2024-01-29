@@ -22,8 +22,8 @@
         <article class="card-item">
           <div class="card-item__carousel">
             <div class="product-media">
-              <div class="product-media__button-left">
-                <button class="carousel__button carousel__button--left">
+              <div class="product-media__button-prev carousel__button-prev">
+                <button class="carousel__button carousel__button-prev">
                   <img src="img/left.svg" alt="Button left" />
                 </button>
               </div>
@@ -35,8 +35,8 @@
                     alt="Doggy Fun Set"
                 /></a>
               </div>
-              <div class="product-media__button-right">
-                <button class="carousel__button carousel__button--right">
+              <div class="product-media__button-next">
+                <button class="carousel__button carousel__button-next">
                   <img src="img/right.svg" alt="Button right" />
                 </button>
               </div>
@@ -79,9 +79,12 @@
             </div>
             <div class="details__description">
               <div class="description__title">
-                <h3 class="description__title">DESCRIPTION</h3>
+                <h3 class="description__title-text">DESCRIPTION</h3>
+                <div class="description__title-divider">
+                  <div class="description__title-divider-strong"></div>
+                  <div class="description__title-divider-thin"></div>
+                </div>
               </div>
-
               <p class="description__text">
                 This is the perfect set to play with your dog! It includes a
                 safety glove, a strong braided rope, and a toy that is so cool
@@ -89,15 +92,20 @@
               </p>
             </div>
           </section>
-          <div class="card-item__thumbnail">
-            <img height="113" src="img/doggy-fun-set.png" alt="Doggy Fun Set" />
-          </div>
         </article>
+        <div class="card-item__thumbnail">
+          <img
+            class="card-item__thumbnail-img"
+            src="img/doggy-fun-set.png"
+            alt="Doggy Fun Set"
+          />
+        </div>
       </div>
     </main>
     <footer>
       <section data-include="index.footer.partial.html"></section>
     </footer>
     <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
+    <script src="js/item-card-page.js"></script>
   </body>
 </html>
