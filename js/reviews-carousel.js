@@ -4,16 +4,16 @@ const prevButtonReview = document.querySelector('.customer-reviews__carousel-btn
 const nextButtonReview = document.querySelector('.customer-reviews__carousel-btn-next');
 
 let currentIndexReview = 0;
-let carouselWidthReview = carousel.offsetWidth;
+let carouselWidthReview = carouselReview.offsetWidth;
 
-showSlideReview(currentIndex);
+showSlideReview(currentIndexReview);
 
 function showSlideReview(index){
-    carouselReview.style.transform = 'translateX(-${index * (100 / getVisibleSlidesReview())}%)';
+    carouselReview.style.transform = `translateX(-${index * (100 / getVisibleSlides())}%)`;
 }
 
 function nextSlideReview() {
-    if(currentIndexReview < slidesReview.length - getVisibleSlidesReview()){
+    if(currentIndexReview < slidesReview.length - getVisibleSlidesReview()) {
         currentIndexReview++;
         showSlideReview(currentIndexReview);
     }

@@ -89,13 +89,16 @@
     cursor: pointer;
     background-color: transparent;
     color: #000;
+    z-index: 1;
 }
 
 .customer-reviews__carousel-btn-prev {
+    left: 0;
     transform: translateY(-50%) rotate(180deg);
 }
 
 .customer-reviews__carousel-btn-next {
+    right: 0;
     transform: translateY(-50%);
 }
 
@@ -109,6 +112,6 @@
 
 .arrow-svg_1j4 {
     fill: var(--description-text-color);
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
