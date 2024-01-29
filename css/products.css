@@ -141,7 +141,7 @@
   position: relative;
   overflow: hidden;
   max-width: 900px;
-  margin: 20px auto;
+  margin: auto;
 }
 
 .carousel-container {
