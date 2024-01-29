@@ -31,6 +31,7 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    background-color:rgb(250 244 242);
     
 }
 
@@ -86,4 +87,67 @@
     height: auto; 
 }
 
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
 
+.bar {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+@media screen and (max-width: 1050px) {
+    .burger-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    
+    .burger-icon {
+        width: 30px;
+        height: 4px;
+        background-color: #333;
+        margin: 6px 0;
+        border-radius: 2px;
+    }
+    
+    .header__menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .header__menu.show {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 1050px) {
+  
+    .header__menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    /* Show the header menu when the burger menu is clicked */
+    .header__menu.show {
+        display: block;
+    }
+}

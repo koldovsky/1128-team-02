@@ -6,7 +6,7 @@ header__hero-logo{
 .header__hero-text{
     position: absolute;
     text-align: left;
-    top: 30%;
+    top: 40%;
     left: 26%;
     transform: translate(-50%, -50%);
     
@@ -15,19 +15,22 @@ header__hero-logo{
 .header__hero-text h1{
     font-size: 80px;
     margin-bottom: -10%;
+    line-height: 1;
 }
 
 .header__hero-text p{
     font-size: 20px;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 
 .header__hero-nav{
+    margin-left: -7%;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 27%;
     transform: translate(-50%, -50%);
+    margin-top: 50px;
 }
 
 
@@ -51,26 +54,46 @@ header__hero-logo{
     background-color:var(--head-hero-button-about-us-hover);
     color: var(--head-hero-button-about-us-hover-text);
   }
-
-  .header__hero-nav .header__hero-categories {
+  .header__hero-categories {
     display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 20px;
+    font-size: 20px ;
+    font-weight:bold;
+    padding: 8px 20px;
+    border: 2px solid var(--head-hero-button-about-us-hover-text);
+    border-radius: 25px; 
+    background-color: transparent;
+    color: var(--head-hero-button-about-us-hover-text);
     text-decoration: none;
-    border-radius: 25px;
-    background-color: var(--head-hero-button-about-us);
-    color: var(--head-main-page-color);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: relative;
+    transition: background-color 0.3s ease; 
+    margin-left: 20px;
   }
   
-  .header__hero-nav .header__hero-categories.round {
-    border-radius: 50%;
+  .header__hero-categories:hover {
+    background-color: var(--head-hero-button-about-us-hover-text);
+    color: white;
   }
   
-  .header__hero-nav .header__hero-categories:hover {
-    background-color:var(--head-hero-button-about-us-hover);
-    color: white
+  .button-text {
+    position: relative;
+    z-index: 1; 
+  }
+  
+  @media screen and (max-width: 1050px) {
+
+    .header__hero-text h1 {
+      font-size: 24px;
+      margin-bottom: 10px; 
   }
 
-  
+  .header__hero-text p {
+      font-size: 14px;
+      margin-bottom: 20px;
+  }
+
+  /* Adjustments for the hero navigation links */
+  .header__hero-nav a {
+      margin-right: 20px;
+      font-size: 14px;
+  }
+}

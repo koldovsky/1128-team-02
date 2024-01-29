@@ -1,0 +1,15 @@
+.footer__logo{
+    width: 193px;
+}
+
+.footer__social-icons{
+    display: flex;
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.footer__social-icons img{
+    margin-right: 15px;
+    width: 31px; 
+    height: auto;
+}

@@ -1,4 +1,146 @@
-/*carousel css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.food-n-stuff .productstitle {
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--title-text-color);
+  line-height: 60px;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.foodbutton,
+.stuffbutton {
+  position: absolute;
+  min-width: 145px;
+  min-height: 49px;
+  background-color: var(--button-cart-background-color-hover);
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  cursor: pointer;
+}
+
+.stuffbuttontext, .foodbuttontext {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 16.5px;
+  color: var(--price-text-color);
+}
+
+.foodbutton {
+  top: 70%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+}
+
+.stuffbutton {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.products_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin: 50px;
+}
+
+.foodpic,
+.stuffpic {
+  width: 643px;
+  height: 340px;
+}
+
+.bonelittleimg {
+  width: 100px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.bestpicks {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--title-text-color);
+  line-height: 30px;
+  text-align: center;
+}
+
+.productstitle {
+  text-align: center;
+}
+
+.image-with-button {
+  width: 645px; 
+  height: 370px;
+  display: flex;
+  position: relative;
+}
+.image-with-buttonn {
+  width: 630px;
+  height: 370px;
+  display: flex;
+  position: relative;
+}
+
+.redtext {
+  position: absolute;
+  top: 15%;
+  left: 7%;
+  color: var(--price-text-color);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.foodtext,
+.foodtextt {
+  position: absolute;
+  font-weight: 700;
+  font-size: 60px;
+  color: var(--title-text-color);
+  line-height: 60px;
+}
+
+.foodtext {
+  top: 25%;
+  left: 7%;
+}
+
+.foodtextt {
+  top: 40%;
+  left: 7%;
+}
+
+.stufftext {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-weight: 700;
+  font-size: 35px;
+  color: var(--title-text-color);
+  line-height: 35px;
+}
+
+.redstufftext {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--price-text-color);
+  line-height: 40px;
+}
+
+.foodbutton:hover,
+.stuffbutton:hover {
+  background-color: var(--button-cart-background-color);
+}
 
 .carousel {
   position: relative;
@@ -22,18 +164,20 @@
 .next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
   color: var(--button-cart-text-color);
   border: none;
   outline: none;
+  background: none;
+  z-index: 1;
 }
 
 .prev {
   left: 0;
 }
+
 .next {
   right: 0;
 }
@@ -46,144 +190,9 @@
   margin: 0 25px;
   text-align: center;
 }
-
-/*food-n-stuff css*/
-.productstitle {
-  font-weight: 700;
-  font-size: 50px;
-  color: var(--title-text-color);
-  line-height: 60px;
-  text-align: center;
-  margin-top: -50px;
-}
-.foodbutton {
-  position: absolute;
-  top: 70%;
-  left: 17%;
-  transform: translate(-50%, -50%);
-  margin-top: 24px;
-  min-width: 145px;
-  min-height: 49px;
-  background-color: var(--button-cart-background-color-hover);
-  border-radius: 25px;
-  color: var(--price-text-color);
-  cursor: pointer;
-  font-family: "Baloo 2", sans-serif;
-  font-size: 16.5px;
-  font-weight: bold;
-  line-height: 16.5px;
-  padding: 16px 28px;
-  border: none;
-  cursor: pointer;
-}
-.stuffbutton {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 24px;
-  min-width: 145px;
-  min-height: 49px;
-  background-color: var(--button-cart-background-color-hover);
-  border-radius: 25px;
-  color: var(--price-text-color);
-  cursor: pointer;
-  font-family: "Baloo 2", sans-serif;
-  font-size: 16.5px;
-  font-weight: bold;
-  line-height: 16.5px;
-  padding: 16px 28px;
-  border: none;
-  cursor: pointer;
-}
-.products_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  margin: 50px;
-}
-.foodpic {
-  width: 643px;
-  height: 340px;
-}
-.stuffpic {
-  width: 643px;
-  height: 340px;
-}
-.bonelittleimg {
-  width: 100px;
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-.bestpicks {
-  font-weight: 400;
-  font-size: 20px;
-  color: var(--title-text-color);
-  line-height: 30px;
-  text-align: center;
-}
-.productstitle {
-  text-align: center;
-}
-.image-with-button {
-  width: 645px;
-  height: 370px;
-  display: flex;
-  position: relative;
-}
-.image-with-buttonn {
-  width: 630px;
-  height: 370px;
-  display: flex;
-  position: relative;
-}
-.redtext {
-  position: absolute;
-  top: 15%;
-  left: 7%;
-  color: var(--price-text-color);
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 20px;
-}
-.foodtext {
-  position: absolute;
-  top: 25%;
-  left: 7%;
-  font-weight: 700;
-  font-size: 60px;
-  color: var(--title-text-color);
-  line-height: 60px;
-}
-.foodtextt {
-  position: absolute;
-  top: 40%;
-  left: 7%;
-  font-weight: 700;
-  font-size: 60px;
-  color: var(--title-text-color);
-  line-height: 60px;
-}
-.stufftext {
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  font-weight: 700;
-  font-size: 35px;
-  color: var(--title-text-color);
-  line-height: 35px;
-}
-.redstufftext {
-  font-weight: 700;
-  font-size: 40px;
-  color: var(--price-text-color);
-  line-height: 40px;
-}
-.foodbutton:hover {
-  background-color: var(--button-cart-background-color);
-}
-.stuffbutton:hover {
-  background-color: var(--button-cart-background-color);
+@media screen and (max-width: 768px) {
+  .products_container {
+    flex-direction: column; 
+    align-items: center; 
+  }
 }
