@@ -1,15 +1,22 @@
-function secretText() {
-    const articlesTitle = document.querySelector(".articles__title");
-    articlesTitle.innerText = "First Project";
-  }
-  function originalText() {
-    const articlesTitle = document.querySelector(".articles__title");
-    articlesTitle.innerText = "Our News & Articles";
-  }
-  function bigLink(page) {
-    page.style.fontSize = "50px";
-  }
-  function smallLink(page) {
-    page.style.fontSize = "15px";
-  }
-  
+const articlesTitles = document.querySelectorAll('.articles__title');
+const articlesLinks = document.querySelectorAll('.articles__link');
+
+articlesTitles.forEach(function (articlesTitle) {
+    articlesTitle.addEventListener('mouseover', function () {
+        articlesTitle.innerText = 'First Project';
+    });
+
+    articlesTitle.addEventListener('mouseout', function () {
+        articlesTitle.innerText = 'Our News & Articles';
+    });
+});
+
+articlesLinks.forEach(function (articlesLink) {
+    articlesLink.addEventListener('mouseover', function () {
+        articlesLink.style.fontSize = '50px';
+    });
+
+    articlesLink.addEventListener('mouseout', function () {
+        articlesLink.style.fontSize = '15px';
+    });
+});
