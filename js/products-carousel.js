@@ -3,11 +3,10 @@ const carouselInner = carousel.querySelector('.carousel-container');
 const prevButton = carousel.querySelector('.prev');
 const nextButton = carousel.querySelector('.next');
 
-let slidesPerView = getSlidesPerView();
-let slides = Array.from(carouselInner.children);
-let currentIndex = slidesPerView;
-
-setupCarousel();
+let slidesPerView = getSlidesPerView(); 
+let slides = Array.from(carouselInner.children); 
+let currentIndex = slidesPerView; 
+setupCarousel(); 
 
 function getSlidesPerView() {
     if (window.innerWidth >= 1024) return 3;
@@ -16,13 +15,11 @@ function getSlidesPerView() {
 }
 
 function setupCarousel() {
-    slides = slides.filter(slide => !slide.classList.contains('clone'));
+   slides = slides.filter(slide => !slide.classList.contains('clone'));
     const clonesStart = slides.slice(-slidesPerView).map(cloneSlide);
     const clonesEnd = slides.slice(0, slidesPerView).map(cloneSlide);
     carouselInner.append(...clonesStart, ...slides, ...clonesEnd);
-
     slides = Array.from(carouselInner.children);
-
     updateCarousel();
 }
 
