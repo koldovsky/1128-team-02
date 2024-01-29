@@ -150,7 +150,7 @@
 }
 
 .pet-item {
-  width: 300px;
+  width: 200px;
   height: auto;
   border-radius: 50%;
 }
@@ -181,8 +181,8 @@
   border-color: var(--button-cart-background-color-hover);
   border-width: 1px;
   border-style: solid;
-  width: 250px;
-  margin: 0 25px;
+  width: 350x;
+  margin: 0 10px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
