@@ -12,14 +12,26 @@ header__hero-logo{
     
 }
 
+
+.header__hero-nav a {
+  display: inline-block;
+  font-size: 1em; /* Medium font size */
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
 .header__hero-text h1{
-    font-size: 80px;
+  font-size: 4em;
     margin-bottom: -10%;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .header__hero-text p{
-    font-size: 20px;
+  font-size: 1.2em;
     margin-top: 10%;
 }
 
@@ -30,7 +42,7 @@ header__hero-logo{
     top: 55%;
     left: 27%;
     transform: translate(-50%, -50%);
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 
@@ -79,21 +91,9 @@ header__hero-logo{
     z-index: 1; 
   }
   
-  @media screen and (max-width: 1050px) {
-
-    .header__hero-text h1 {
-      font-size: 24px;
-      margin-bottom: 10px; 
-  }
-
-  .header__hero-text p {
-      font-size: 14px;
-      margin-bottom: 20px;
-  }
-
-  /* Adjustments for the hero navigation links */
-  .header__hero-nav a {
-      margin-right: 20px;
-      font-size: 14px;
-  }
+  @media screen and (max-width: 970px) {
+    .header__hero-text,
+    .header__hero-nav {
+        display: none;
+    }
 }
