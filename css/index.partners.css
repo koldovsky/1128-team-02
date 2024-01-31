@@ -15,14 +15,15 @@
 
 /* Fixed size for carousel items, centered content */
 .partners__carousel-slides-item {
-  width: 261px;
-  height: 120px;
+  width: 200px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
   margin-left: 10px;
   background-color: #ffe6d4;
+  padding: 30px;
 }
 
 /* Responsive image styling */
@@ -36,6 +37,7 @@
 .partners__carousel-btn-prev,
 .partners__carousel-btn-next {
   position: absolute;
+  z-index: 10;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -68,4 +70,37 @@
 
 .arrow-svg_1j4:hover {
   fill: black;
+}
+
+/* Default for small screens: Show 1 card */
+.partners__carousel-slides-item {
+  flex: 0 0 calc(100% - 20px); /* Subtract margin */
+}
+
+/* Small screens (e.g., phones in landscape): Show 2 cards */
+@media (min-width: 480px) {
+  .partners__carousel-slides-item {
+    flex: 0 0 calc(50% - 20px); /* Adjust for 2 cards with margins */
+  }
+}
+
+/* Medium screens (e.g., tablets): Show 3 cards */
+@media (min-width: 768px) {
+  .partners__carousel-slides-item {
+    flex: 0 0 calc(33.333% - 20px); /* Adjust for 3 cards with margins */
+  }
+}
+
+/* Large screens: Show 4 cards */
+@media (min-width: 992px) {
+  .partners__carousel-slides-item {
+    flex: 0 0 calc(25% - 20px); /* Adjust for 4 cards with margins */
+  }
+}
+
+/* Extra large screens: Show 5 cards */
+@media (min-width: 1200px) {
+  .partners__carousel-slides-item {
+    flex: 0 0 calc(20% - 20px); /* Adjust for 5 cards with margins */
+  }
 }
