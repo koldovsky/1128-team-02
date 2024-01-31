@@ -1,0 +1,68 @@
+.cart-tab {
+  display: none;
+}
+
+.cart-tab__icon {
+  position: fixed;
+  right: 30px;
+  top: 80px;
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border: 2px;
+  border-radius: 50%;
+  border-color: var(--button-cart-background-color-hover);
+  border-style: solid;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.cart-icon {
+  max-width: 28px;
+}
+
+#cartCount {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  background-color: var(--price-text-color);
+  color: white;
+  border-radius: 50%;
+  font-family: "Times New Roman";
+  font-size: 15px;
+  min-height: 20px;
+  min-width: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.cart-anim {
+  animation: vibrate 0.1s linear;
+}

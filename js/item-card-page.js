@@ -29,7 +29,7 @@ document.addEventListener("partialsLoaded", () => {
       imageToVibrate.classList.remove("vibrating-image");
     });
 
-    // const cartIcon = document.querySelector(".cart-tab__icon");
-    // cartIcon.addEventListener("click", openModal);
+    const cartIcon = document.querySelector(".cart-tab__icon");
+    cartIcon.addEventListener("click", openModal);
   });
 });
