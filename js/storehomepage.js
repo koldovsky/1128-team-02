@@ -240,7 +240,7 @@ const products = [
     image: "img/vitalifecrunchstickstreat.png",
     title: "VITALIFE Crunch Sticks Treat",
     price: "$5,00",
-  },
+  }
 ];
 
 function renderProducts(products) {
@@ -266,6 +266,9 @@ function renderProducts(products) {
   document.querySelector(".prodlist").innerHTML = productsDomString;
 }
 
+document.querySelector(".storehomepage__title--store").innerHTML += ` (${products.length})`;
+document.querySelector(".storehomepage__title--products").innerHTML += ` (${products.length})`;
+
 const selectProdPerPage = document.querySelector('.navprodperpage-select');
 
 let displayProdPerPage = selectProdPerPage.options[selectProdPerPage.selectedIndex].value;
@@ -280,21 +283,15 @@ if (urlParams.has('limit')) {
       displayProductsStartingFrom = (displayPage - 1) * displayProdPerPage;
     };
 } 
-console.log(displayPage)
-
 
 function renderPageBtns(pgs) {
   let pageBtnDomString = "";
-  for (let i = 1; i <= pgs; i++) {
-    if (i === displayPage) {
+  const pgLimit = 3;
+  let startAt =  Math.floor(displayPage / pgLimit) + 1
+  for (let i = startAt;  i <= pgLimit + startAt && i <= pgs; i++) {
     pageBtnDomString += `
-      <button class="pagenav-num" id="page_btn_${i}" disabled>${i}</button>
-    `;
-    } else {
-      pageBtnDomString += `
       <button class="pagenav-num" id="page_btn_${i}">${i}</button>
     `;
-    }
   }
   document.querySelector(".pagenav-prev").insertAdjacentHTML('afterend', pageBtnDomString);
 }
@@ -357,3 +354,4 @@ goToPage.addEventListener('click', (event) => {
   }
 
 });
+
