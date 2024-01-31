@@ -311,12 +311,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .cart-icon {
   max-width: 28px;
-  opacity: 0; /* начальное состояние - скрыто */
-  transition-property: opacity;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  user-select: none;
-  vertical-align: baseline;
 }
 
 #cartCount {
@@ -334,6 +328,31 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.cart-anim {
+  animation: vibrate 0.1s linear;
 }
 
 @media (max-width: 767px) {

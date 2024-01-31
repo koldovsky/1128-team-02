@@ -15,6 +15,7 @@ document.addEventListener("partialsLoaded", () => {
   const buyButton = document.getElementById("buyButton");
   const cartTab = document.querySelector(".cart-tab");
   const cartIcon = document.querySelector(".cart-icon");
+  const imageToVibrate = document.querySelector(".cart-anim");
   let count = 0;
 
   buyButton.addEventListener("click", function () {
@@ -22,9 +23,13 @@ document.addEventListener("partialsLoaded", () => {
     count += quantityToAdd;
     document.getElementById("cartCount").textContent = count;
     cartTab.style.display = "block";
-    cartIcon.style.opacity = 1;
-  });
+    imageToVibrate.classList.add("cart-anim");
 
-  // const cartIcon = document.querySelector(".cart-tab__icon");
-  // cartIcon.addEventListener("click", openModal);
+    imageToVibrate.addEventListener("animationend", function () {
+      imageToVibrate.classList.remove("vibrating-image");
+    });
+
+    // const cartIcon = document.querySelector(".cart-tab__icon");
+    // cartIcon.addEventListener("click", openModal);
+  });
 });
