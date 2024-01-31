@@ -15,3 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+const buyButton = document.getElementById("buyButton");
+const cartCount = document.getElementById("cartCount");
+const count = 0;
+
+buyButton.addEventListener("click", function () {
+  count += quantityInput;
+  cartCount.textContent = count;
+});

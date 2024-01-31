@@ -1,3 +1,4 @@
-document.querySelector('.burger-menu').addEventListener('click', function() {
-    document.querySelector('.header__menu').classList.toggle('show');
-});
+ const burgerMenu = document.querySelector('.burger-menu');
+  burgerMenu.addEventListener('click', () => {
+    toggleMenu(); 
+  })

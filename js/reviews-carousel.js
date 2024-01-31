@@ -52,3 +52,13 @@ function getVisibleSlidesReview() {
 window.addEventListener("resize", () => {
   carouselReviewWidthReview = carouselReview.offsetWidth;
 });
+
+//function changeButtonPosition() {
+  //    const newLeftValue = 8 + (7 * (carouselWidth / 100));
+  //    prevButton.style.right = newLeftValue + '%';
+  //
+  //    const newRightValue = -75 + (9 * (carouselWidth / 100));
+  //    nextButton.style.right = newRightValue + '%';
+  //
+  //}
+  //changeButtonPosition();

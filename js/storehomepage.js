@@ -1,3 +1,6 @@
+document.addEventListener("partialsLoaded", () => {
+  import('./burger-menu.js');
+});
 
 const products = [
   {
@@ -240,6 +243,47 @@ const products = [
   },
 ];
 
+class PageButton {
+  static pageBtnElCount = 0;
+  static pageBtns = [];
+  
+
+  constructor(id) {
+    this.id = id;
+    this.pageIndex = /(\d+)/.exec(id)
+    this.btnEl = document.querySelector(`#${this.id}`);
+    console.log(this.btnEl) /*  NOT WORKING  >> everything else as well*/
+    PageButton.pageBtnElCount++;
+    PageButton.pageBtns.push(this);
+  }
+
+  disableBtn() {
+    this.btnEl.prop('disabled', true)
+  }
+
+  enableBtn() {
+    this.btnEl.removeProp('disabled')
+  }
+
+  hide() {
+    if (this.btnEl) {
+      this.btnEl.style.display = 'none';
+    }
+  }
+
+  // or generate and display only 2 btn at a time
+  static displayTwoAtMost(goToPage) {
+  // if (pageBtnElCount > 2) {
+    // PageButton.pageBtns
+    //   .filter(btn => btn.pageIndex > goToPage + 1)
+      console.log(PageButton.pageBtns.filter(btn => btn.pageIndex > goToPage + 1))
+      PageButton.pageBtns.forEach(btn => console.log(btn))
+      // .forEach(btn => btn.btnEl.css('display', 'none'));
+      // .forEach(btn => btn.btnEl.hide())
+  // }
+  }
+}
+
 function renderProducts(products) {
   let productsDomString = "";
   for (const product of products) {
@@ -263,30 +307,93 @@ function renderProducts(products) {
   document.querySelector(".prodlist").innerHTML = productsDomString;
 }
 
-
 const selectProdPerPage = document.querySelector('.navprodperpage-select');
 
 let displayProdPerPage = selectProdPerPage.options[selectProdPerPage.selectedIndex].value;
+let displayProductsStartingFrom = 0;
+let displayPage = 1;
 
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.has('limit')) {
     displayProdPerPage = urlParams.get('limit')
+    if (urlParams.has('page')) {
+      displayPage = urlParams.get('page');
+      displayProductsStartingFrom = (displayPage - 1) * displayProdPerPage;
+    };
+} 
+
+function renderPageBtns() {
+  const numOfPages = Math.ceil(products.length / displayProdPerPage);
+  let pageBtnDomString = "";
+  for (let i = 1; i <= numOfPages; i++) {
+    pageBtnDomString += `
+      <button class="pagenav-num" id="page_btn_${i}">${i}</button>
+    `;
+    new PageButton(`page_btn_${i}`)
+  }
+  document.querySelector(".pagenav-prev").insertAdjacentHTML('afterend', pageBtnDomString);
 }
 
-renderProducts(products.slice(0, displayProdPerPage));
+renderProducts(products.slice(displayProductsStartingFrom, displayProdPerPage));
+renderPageBtns()
 
 for (const option of selectProdPerPage.options) {
-    if (option.value === displayProdPerPage) {
-        option.selected = true;
-    } else {
-        option.selected = false;
-    }
-}
+  option.selected = (option.value === displayProdPerPage) ? true : false;
+};
 
 selectProdPerPage.addEventListener('change', (event) => {
-    let displayProdPerPage = event.target.value;
-    renderProducts(products.slice(0, displayProdPerPage))
+    displayProdPerPage = event.target.value;
+    renderProducts(products.slice(displayProductsStartingFrom, displayProductsStartingFrom + displayProdPerPage));
     if (window.location.pathname.endsWith('/storehomepage')) {
-        window.location.search = `?limit=${displayProdPerPage}`
+      window.location.search = `?limit=${displayProdPerPage}`
+    }
+    if (window.location.pathname.endsWith('/storehomepage&page=')) {
+      window.location.search = `?limit=${displayProdPerPage}`
     }
 });
+
+const goToPage = document.querySelector('.pagenav');
+
+goToPage.addEventListener('click', (event) => {
+
+  let btnClicked = event.target.getAttribute("id");
+  console.log(btnClicked);
+  renderProducts(products.slice(displayProductsStartingFrom, displayProductsStartingFrom + displayProdPerPage));
+
+  switch (btnClicked) {
+    case 'prev_btn':
+      displayPage--;
+      break;
+    case 'next_btn': 
+      displayPage++;
+      break;
+    default:
+      displayPage = /\d+/.exec(btnClicked);
+  }
+
+  if (window.location.pathname.endsWith('/storehomepage')) {
+    window.location.search = `?limit=${displayProdPerPage}&page=${displayPage}`
+  }
+  
+});
+
+/*
+current page - active
+all other - disabled
+
+
+if 1st - prev disabled, next enabled (by default)
+if 1st and only - prev and next disabled
+
+if nth (last) - next disabled, prev enaabled
+if nth(last) === 1st - prev and next disabled
+
+if not 1st and not only - prev & next enabled
+
+
+display 2 btn at most
+*/
+
+
+console.log(PageButton.pageBtnElCount)
+PageButton.displayTwoAtMost(0)

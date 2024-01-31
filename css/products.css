@@ -1,10 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.food-n-stuff .productstitle {
+.products .productstitle {
   font-weight: 700;
   font-size: 50px;
   color: var(--title-text-color);
@@ -145,8 +140,8 @@
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  margin: 20px 0;
+  max-width: 950px;
+  margin: auto;
 }
 
 .carousel-container {
@@ -156,7 +151,6 @@
 
 .pet-item {
   width: 200px;
-  height: auto;
   border-radius: 50%;
 }
 
@@ -186,8 +180,8 @@
   border-color: var(--button-cart-background-color-hover);
   border-width: 1px;
   border-style: solid;
-  width: 250px;
-  margin: 0 25px;
+  width: 300px;
+  margin: 0 20px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {

@@ -14,7 +14,7 @@
   font-size: 18px;
   font-family: "Baloo 2", sans-serif;
   color: var(--description-text-color);
-  margin-top: 15px;
+  margin: 15px 20px 40px 20px;
 }
 
 .customer-reviews__reviewstitle {
@@ -97,7 +97,7 @@
 }
 
 .customer-reviews__carousel-btn-prev {
-  left: 0;
+  left: -5px;
   transform: translateY(-50%) rotate(180deg);
 }
 
