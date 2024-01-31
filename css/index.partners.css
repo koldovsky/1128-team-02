@@ -37,6 +37,7 @@
 .partners__carousel-btn-prev,
 .partners__carousel-btn-next {
   position: absolute;
+  z-index: 10;
   top: 50%;
   transform: translateY(-50%);
   background: none;

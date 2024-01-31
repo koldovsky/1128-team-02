@@ -9,7 +9,6 @@ function showSlide(index) {
   const slideWidth = slides[0].offsetWidth ; 
   const transformValue = -slideWidth * index;
   carousel.style.transform = `translateX(${transformValue}px)`;
-  updateButtonStates();
 }
 
 function nextSlide() {
@@ -47,4 +46,5 @@ function getVisibleSlides() {
 window.addEventListener("resize", () => {
   showSlide(currentIndex);
 });
+
 
