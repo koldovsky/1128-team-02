@@ -102,18 +102,20 @@
             alt="Doggy Fun Set"
           />
         </div>
-        <div class="cart-tab">
-          <div class="cart-tab__icon">
-            <img class="cart-icon" src="img/cart-item.svg" alt="cart icon" />
-            <span id="cart-count" id="cartCount">0</span>
-          </div>
-        </div>
       </div>
     </main>
     <footer>
       <section data-include="index.footer.partial.html"></section>
+      <div data-include="cart-modal.partial.html"></div>
     </footer>
+    <div class="cart-tab">
+      <div class="cart-tab__icon">
+        <img class="cart-icon" src="img/cart-item.svg" alt="cart icon" />
+        <div id="cartCount">0</div>
+      </div>
+    </div>
     <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
     <script src="js/item-card-page.js"></script>
+    <script src="js/cart-modal.js"></script>
   </body>
 </html>

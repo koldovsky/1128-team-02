@@ -1,6 +1,4 @@
-document.addEventListener("partialsLoaded", () => {});
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("partialsLoaded", () => {
   const quantityInput = document.querySelector(".purchase__quantity-input");
   const buttonUp = document.querySelector(".button-up");
   const buttonDown = document.querySelector(".button-down");
@@ -14,13 +12,19 @@ document.addEventListener("DOMContentLoaded", function () {
       quantityInput.value = parseInt(quantityInput.value, 10) - 1;
     }
   });
-});
+  const buyButton = document.getElementById("buyButton");
+  const cartTab = document.querySelector(".cart-tab");
+  const cartIcon = document.querySelector(".cart-icon");
+  let count = 0;
 
-const buyButton = document.getElementById("buyButton");
-const cartCount = document.getElementById("cartCount");
-const count = 0;
+  buyButton.addEventListener("click", function () {
+    let quantityToAdd = parseInt(quantityInput.value, 10);
+    count += quantityToAdd;
+    document.getElementById("cartCount").textContent = count;
+    cartTab.style.display = "block";
+    cartIcon.style.opacity = 1;
+  });
 
-buyButton.addEventListener("click", function () {
-  count += quantityInput;
-  cartCount.textContent = count;
+  // const cartIcon = document.querySelector(".cart-tab__icon");
+  // cartIcon.addEventListener("click", openModal);
 });
