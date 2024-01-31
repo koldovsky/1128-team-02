@@ -13,7 +13,7 @@ articlesTitles.forEach(function (articlesTitle) {
 
 articlesLinks.forEach(function (articlesLink) {
     articlesLink.addEventListener('mouseover', function () {
-        articlesLink.style.fontSize = '50px';
+        articlesLink.style.fontSize = '30px';
     });
 
     articlesLink.addEventListener('mouseout', function () {
