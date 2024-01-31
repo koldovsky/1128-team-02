@@ -243,47 +243,6 @@ const products = [
   },
 ];
 
-class PageButton {
-  static pageBtnElCount = 0;
-  static pageBtns = [];
-  
-
-  constructor(id) {
-    this.id = id;
-    this.pageIndex = /(\d+)/.exec(id)
-    this.btnEl = document.querySelector(`#${this.id}`);
-    console.log(this.btnEl) /*  NOT WORKING  >> everything else as well*/
-    PageButton.pageBtnElCount++;
-    PageButton.pageBtns.push(this);
-  }
-
-  disableBtn() {
-    this.btnEl.prop('disabled', true)
-  }
-
-  enableBtn() {
-    this.btnEl.removeProp('disabled')
-  }
-
-  hide() {
-    if (this.btnEl) {
-      this.btnEl.style.display = 'none';
-    }
-  }
-
-  // or generate and display only 2 btn at a time
-  static displayTwoAtMost(goToPage) {
-  // if (pageBtnElCount > 2) {
-    // PageButton.pageBtns
-    //   .filter(btn => btn.pageIndex > goToPage + 1)
-      console.log(PageButton.pageBtns.filter(btn => btn.pageIndex > goToPage + 1))
-      PageButton.pageBtns.forEach(btn => console.log(btn))
-      // .forEach(btn => btn.btnEl.css('display', 'none'));
-      // .forEach(btn => btn.btnEl.hide())
-  // }
-  }
-}
-
 function renderProducts(products) {
   let productsDomString = "";
   for (const product of products) {
@@ -321,21 +280,45 @@ if (urlParams.has('limit')) {
       displayProductsStartingFrom = (displayPage - 1) * displayProdPerPage;
     };
 } 
+console.log(displayPage)
 
-function renderPageBtns() {
-  const numOfPages = Math.ceil(products.length / displayProdPerPage);
+
+function renderPageBtns(pgs) {
   let pageBtnDomString = "";
-  for (let i = 1; i <= numOfPages; i++) {
+  for (let i = 1; i <= pgs; i++) {
+    if (i === displayPage) {
     pageBtnDomString += `
+      <button class="pagenav-num" id="page_btn_${i}" disabled>${i}</button>
+    `;
+    } else {
+      pageBtnDomString += `
       <button class="pagenav-num" id="page_btn_${i}">${i}</button>
     `;
-    new PageButton(`page_btn_${i}`)
+    }
   }
   document.querySelector(".pagenav-prev").insertAdjacentHTML('afterend', pageBtnDomString);
 }
 
-renderProducts(products.slice(displayProductsStartingFrom, displayProdPerPage));
-renderPageBtns()
+renderProducts(products.slice(displayProductsStartingFrom, displayProductsStartingFrom + displayProdPerPage));
+const numOfPages = Math.ceil(products.length / displayProdPerPage);
+renderPageBtns(numOfPages)
+
+pageBtn = document.querySelector(`#page_btn_${displayPage}`);
+pageBtn.setAttribute('disabled', '');
+
+nextPageBtn = document.querySelector("#next_btn");
+prevPageBtn = document.querySelector('#prev_btn');
+
+
+if(Number(displayPage) === numOfPages && Number(displayPage) === 1) {
+  nextPageBtn.setAttribute('disabled', '');
+  prevPageBtn.setAttribute('disabled', '');
+} else if (Number(displayPage) === numOfPages) {
+  nextPageBtn.setAttribute('disabled', '')
+} else if (Number(displayPage) === 1) {
+  prevPageBtn.setAttribute('disabled', '')
+}
+
 
 for (const option of selectProdPerPage.options) {
   option.selected = (option.value === displayProdPerPage) ? true : false;
@@ -357,8 +340,6 @@ const goToPage = document.querySelector('.pagenav');
 goToPage.addEventListener('click', (event) => {
 
   let btnClicked = event.target.getAttribute("id");
-  console.log(btnClicked);
-  renderProducts(products.slice(displayProductsStartingFrom, displayProductsStartingFrom + displayProdPerPage));
 
   switch (btnClicked) {
     case 'prev_btn':
@@ -374,26 +355,5 @@ goToPage.addEventListener('click', (event) => {
   if (window.location.pathname.endsWith('/storehomepage')) {
     window.location.search = `?limit=${displayProdPerPage}&page=${displayPage}`
   }
-  
+
 });
-
-/*
-current page - active
-all other - disabled
-
-
-if 1st - prev disabled, next enabled (by default)
-if 1st and only - prev and next disabled
-
-if nth (last) - next disabled, prev enaabled
-if nth(last) === 1st - prev and next disabled
-
-if not 1st and not only - prev & next enabled
-
-
-display 2 btn at most
-*/
-
-
-console.log(PageButton.pageBtnElCount)
-PageButton.displayTwoAtMost(0)
