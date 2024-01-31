@@ -7,21 +7,23 @@
   padding: 20px; /* Adding space inside the container */
   padding-top: 90px;
   padding-bottom: 30px;
+    padding-left: 32px;
+  padding-right: 32px;
 }
 
 .best-deals__list {
-  display: grid; 
-  grid-template-columns: 1fr; 
-  gap: 20px; 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   min-height: 300px;
 }
 
 /* Media query for large screens */
 @media (min-width: 768px) {
-  
   .best-deals__list {
     grid-template-columns: 1fr 1fr; /* On large screens: place cards in two columns */
     min-height: 400px;
+    padding: 15px;
   }
 
   .best-deals__card {
@@ -31,42 +33,55 @@
 
 /* Styling for each best deal card */
 .best-deals__card {
-  background-color: white; 
-  margin: 24px; 
+  background-color: white;
+  margin-top: 24px;
   overflow: hidden; /* Ensuring content doesn't spill out of card borders */
-  padding: 20px; 
   display: flex;
   flex-direction: column;
-  justify-content: center; 
   background-size: cover;
-  background-position: center 60%;
   background-repeat: no-repeat;
-  min-height: 300px;
-  
 }
 
 .best-deals__card[data-image="img/aquarium-best-deals.png"] {
   background-image: url(../img/aquarium-best-deals.png);
   overflow: clip;
+  justify-content: flex-start;
+  text-align: center;
+  background-position: bottom center; /* Adjust the position as needed */
+  min-height: 400px; /* Increase the height to prevent cropping */
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .best-deals__card[data-image="img/pets-best-deals.png"] {
   background-image: url(../img/pets-best-deals.png);
   overflow: clip;
+  background-position: bottom center; 
+  text-align: left;
+  justify-content: center; 
+  align-items: flex-start; /* Aligns content to the left */
+  min-height: 400px; /* Increase the height to prevent cropping */
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Styling for the titles in the cards */
 .best-deals__title-aquarium {
-  font-size: 30px; 
-  margin: 10px; 
+  font-size: 44px;
+  margin: 10px;
   font-weight: bold;
   color: #3c3733;
   text-align: center;
+  padding-top: 40px;
+}
+
+.best-deals__title-on {
+  display: block; /* This will make the text appear on a new line */
 }
 
 .best-deals__title-pets {
-  font-size: 30px; 
-  margin: 10px; 
+  font-size: 30px;
+  margin: 10px;
   font-weight: bold;
   color: #3c3733;
 }
@@ -74,18 +89,20 @@
 /* Styling for the category and price paragraphs */
 .best-deals__category,
 .best-deals__price {
-  margin: 10px; 
-  color: #555; 
-  font-family: sans-serif;
+  margin: 10px;
+  color: #555;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
 }
 
 /* Styling for the call-to-action and button links */
 .best-deals__cta-link {
   color: var(--card-page-text-color);
   font-size: 17px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
   cursor: pointer;
   text-align: center;
-  font-family: sans-serif;
   transition: color 0.1s;
 }
 .best-deals__arrow {
@@ -98,28 +115,29 @@
 
 .best-deals__button-link {
   display: inline-block; /* Making the link behave like a block for styling */
-  border: 2px solid var(--price-text-color);
+  border: 1px solid var(--price-text-color);
   color: var(--price-text-color);
-  border-color: var(
-    --price-text-color
-  ); 
-  padding: 10px 20px; 
-  border-radius: 8px; /* rounded corners for the button */
-  margin: 10px; 
-  text-decoration: none; /* Removing underline from links */
+  border-color: var(--price-text-color);
+  padding: 10px 25px;
+  border-radius: 25px; /* rounded corners for the button */
+  margin: 10px;
   background-color: transparent;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
 /* Hover effect for the links */
 .best-deals__button-link:hover {
-  background-color: var(
-    --price-text-color
-  ); 
+  background-color: var(--price-text-color);
   color: white;
+}
+
+.best-deals__button-content {
+  font-size: 16.5px;
+  font-family: "PT Sans", sans-serif;
 }
 
 .best-deals__price-text,
 .best-deals__title-percent {
   color: var(--price-text-color);
+  font-weight: bold;
 }
