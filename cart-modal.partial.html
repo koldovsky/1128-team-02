@@ -1,8 +1,71 @@
+<div class="cart-tab">
+  <div class="cart-tab__icon">
+    <img class="cart-icon cart-anim" src="img/cart-item.svg" alt="cart icon" />
+    <div id="cartCount">0</div>
+  </div>
+</div>
 <div id="cartModal" class="modal">
   <div class="modal-backdrop"></div>
   <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <h2>Ваша корзина</h2>
+    <div class="cart-tab__header">
+      <h2 class="cart-tab__header-title">Shopping cart</h2>
+      <img class="close-modal" src="img/close-icon.svg" alt="close-icon" />
+      <!-- <span class="close-modal">&times;</span> -->
+    </div>
+    <div class="cart-tab__order-box">
+      <div class="cart-tab__order-details">
+        <h5 class="order-text">Products</h5>
+        <div class="cart-tab__order-details-inner">
+          <div class="cart-tab__order-details-inner-img">
+            <img
+              class="order-details-img"
+              src="img/doggy-fun-set.png"
+              alt="product img"
+            />
+          </div>
+          <div class="cart-tab__order-details-inner-name">
+            <a class="order-details-name" href="#">DOGGY Fun Set</a>
+          </div>
+          <div class="details__purchase">
+            <div class="details__inner">
+              <input
+                type="number"
+                class="purchase__quantity-input"
+                value="1"
+                data-test="quantity-input"
+              />
+              <div class="purchase__quantity-buttons">
+                <img
+                  class="button-up"
+                  src="img/button-up.svg"
+                  alt="Button Up"
+                />
+                <img
+                  class="button-down"
+                  src="img/button-down.svg"
+                  alt="Button Down"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cart-tab__order-details-price">
+            <p class="order-details-price">$6,00</p>
+          </div>
+          <div class="cart-tab__order-details-delete-item">
+            <img
+              class="order-details-delete-icom"
+              src="img/delete-icon.svg"
+              alt="delete-icon"
+            />
+          </div>
+        </div>
+        <div class="cart-tab__order-total-price">
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-tab__customer-details"></div>
     <!-- Содержимое корзины -->
     <p>Товары в вашей корзине...</p>
     <!-- Кнопки действий -->
