@@ -19,17 +19,22 @@ articlesLinks.forEach(function (articlesLink) {
     articlesLink.addEventListener('mouseout', function () {
         articlesLink.style.fontSize = '15px';
     });
+
+    articlesLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        const linkHref = articlesLink.getAttribute('href');
+        window.open(linkHref, '_blank');
+    });
 });
+
 const articlesImages = document.querySelectorAll('.articles__image');
 
 articlesImages.forEach(function (articlesImage) {
-    // Збільшення розміру при наведенні
     articlesImage.addEventListener('mouseover', function () {
         articlesImage.style.transform = 'scale(1.05)'; // Збільшення на 5%
     });
 
-    // Повернення до звичайного розміру при виході з наведення
     articlesImage.addEventListener('mouseout', function () {
-        articlesImage.style.transform = 'scale(1)'; // Повертаємо до звичайного розміру
+        articlesImage.style.transform = 'scale(1)'; 
     });
 });
