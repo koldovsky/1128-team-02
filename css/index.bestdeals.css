@@ -7,11 +7,14 @@
   padding: 20px; /* Adding space inside the container */
   padding-top: 90px;
   padding-bottom: 30px;
-    padding-left: 32px;
-  padding-right: 32px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.best-deals__list {
+.best-deals__list{
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -25,16 +28,13 @@
     min-height: 400px;
     padding: 15px;
   }
-
-  .best-deals__card {
-    max-width: 100%; /* Allows cards to be responsive within the grid */
-  }
 }
 
 /* Styling for each best deal card */
 .best-deals__card {
   background-color: white;
-  margin-top: 24px;
+  margin: 24px ; /* centering the card */
+  max-width: 820px; /* you can adjust this value */
   overflow: hidden; /* Ensuring content doesn't spill out of card borders */
   display: flex;
   flex-direction: column;

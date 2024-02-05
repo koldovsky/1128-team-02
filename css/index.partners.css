@@ -1,29 +1,32 @@
 .partners {
-  width: 100%; /* Full container width */
   overflow: hidden; /* Hide overflow */
   position: relative; /* Relative positioning for navigation buttons */
   background-color: rgb(250, 244, 242);
   padding-top: 30px;
   padding-bottom: 90px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Horizontal flexbox layout for carousel slides */
 .partners__carousel-slides {
   display: flex;
   transition: transform 0.3s ease-in-out; /* Slide transition */
+  padding-left: 40px;
+  padding-right: 40px;;
 }
 
 /* Fixed size for carousel items, centered content */
 .partners__carousel-slides-item {
-  width: 200px;
-  height: 150px;
+  height: 120px;
+  margin-right: 10px;
+  margin-left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
-  margin-left: 10px;
   background-color: #ffe6d4;
-  padding: 30px;
+  padding: 35px;
 }
 
 /* Responsive image styling */
@@ -38,7 +41,7 @@
 .partners__carousel-btn-next {
   position: absolute;
   z-index: 10;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -64,7 +67,6 @@
 /* Hover effect on navigation buttons */
 .partners__carousel-btn-prev:hover,
 .partners__carousel-btn-next:hover {
-  background-color: #333;
   border-radius: 20px;
 }
 
@@ -84,23 +86,23 @@
   }
 }
 
-/* Medium screens (e.g., tablets): Show 3 cards */
+/* Medium screens (e.g., tablets): Show 4 cards */
 @media (min-width: 768px) {
-  .partners__carousel-slides-item {
-    flex: 0 0 calc(33.333% - 20px); /* Adjust for 3 cards with margins */
-  }
-}
-
-/* Large screens: Show 4 cards */
-@media (min-width: 992px) {
   .partners__carousel-slides-item {
     flex: 0 0 calc(25% - 20px); /* Adjust for 4 cards with margins */
   }
 }
 
-/* Extra large screens: Show 5 cards */
-@media (min-width: 1200px) {
+/* Large screens: Show 5 cards */
+@media (min-width: 992px) {
   .partners__carousel-slides-item {
     flex: 0 0 calc(20% - 20px); /* Adjust for 5 cards with margins */
+  }
+}
+
+/* Extra large screens: Show 6 cards */
+@media (min-width: 1200px) {
+  .partners__carousel-slides-item {
+    flex: 0 0 calc(16.666% - 20px); /* Adjust for 6 cards with margins */
   }
 }
