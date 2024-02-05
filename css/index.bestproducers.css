@@ -1,0 +1,83 @@
+.bestproducers {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bestproducers__image-container {
+    max-width: 66%;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 510px;
+}
+
+.bestproducers__content {
+    width: 33%;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 510px;
+    justify-content: flex-start;
+}
+
+
+.bestproducers__textblock {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.bestproducers__promo {
+    color: var(--price-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.bestproducers__title {
+    color: var(--title-text-color);
+    font-family: "Baloo 2", cursive;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 38.4px;
+}
+
+.bestproducers__link {
+    color: rgba(35, 35, 35, 0.45);
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    /* margin-block-start: 25px; */
+    margin-top: 25px;
+    line-height: 27.2px;
+}
+
+.bestproducers__link-arrow{
+    color: var(--button-cart-text-color);
+}
+
+.bestproducers__link:hover {
+    text-decoration: underline;
+  }
+
+.bestproducers__list {
+  margin-top: 20px;
+}
+
+.bestproducers__item {
+    color: var(--title-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.bestproducers__dot {
+    color: var(--price-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
