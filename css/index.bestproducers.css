@@ -14,12 +14,13 @@
 }
 
 .bestproducers__content {
-    background-color: rgb(255, 230, 212);
     width: 33%;
     padding-left: 15px;
     padding-right: 15px;
     height: 510px;
+    justify-content: flex-start;
 }
+
 
 .bestproducers__textblock {
     text-align: left;
@@ -42,6 +43,7 @@
     font-size: 32px;
     font-weight: 700;
     margin-top: 20px;
+    line-height: 38.4px;
 }
 
 .bestproducers__link {
@@ -49,7 +51,21 @@
     font-family: "PT Sans", sans-serif;
     font-size: 17px;
     font-weight: 700;
+    /* margin-block-start: 25px; */
     margin-top: 25px;
+    line-height: 27.2px;
+}
+
+.bestproducers__link-arrow{
+    color: var(--button-cart-text-color);
+}
+
+.bestproducers__link:hover {
+    text-decoration: underline;
+  }
+
+.bestproducers__list {
+  margin-top: 20px;
 }
 
 .bestproducers__item {
