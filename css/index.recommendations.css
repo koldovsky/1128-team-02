@@ -6,6 +6,13 @@
   line-height: 60px;
 }
 
+.recommendations__icon {
+  max-width: 80px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .recommendations__description {
   font-family: "PT Sans", sans-serif;
   color: var(--main-text-color);
@@ -14,11 +21,11 @@
   font-weight: 400;
 }
 
-
-.products-card {
+.product-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
+
 
 .products-card .product-card__name-link {
   color: var(--main-text-color);
@@ -26,4 +33,24 @@
 
 .products-card .product-card__name-link:hover {
   text-decoration: underline;
+}
+
+.product-card__price {
+  color: var(--price-text-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+}
+
+@media (min-width: 500 px) {
+  .recommendations__nav  {
+    display: flex;
+  }
+
+  .products-card {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
