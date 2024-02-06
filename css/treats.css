@@ -9,6 +9,7 @@
   .treats__photo {
     max-width: 120px;
     height: auto; 
+    border-radius: 50%;
 }
 
 @media (max-width: 768px) {
@@ -25,7 +26,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 100px;
+    padding-right: 100px;
+    padding-left: 100px; 
   }
   
   @media (max-width: 768px) {
@@ -39,7 +41,6 @@
 
 .bone__treats{
   max-width: 80px;
-  margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -53,13 +54,8 @@
   color: #7f5f49;
 }
 
-
-
-
-
-
-
 .price {
-  color: lightblue; /* Встановлюємо світло синій колір для ціни */
+  color: rgb(255, 0, 0); 
+  margin-left: 50px;
 }
 
