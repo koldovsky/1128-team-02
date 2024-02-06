@@ -51,7 +51,7 @@ const products = [
         id: '7',
         title: 'Grain & Nuts-3$',
         image: 'img/other-grain.webp',
-        description: '>Whole Brown Rice, Oat Groats, Wheat Bran, Wheat, Soybean Meal, Soybean Hulls.',
+        description: 'Whole Brown Rice, Oat Groats, Wheat Bran, Wheat, Soybean Meal, Soybean Hulls.',
         category: 'other',
 
     },
@@ -75,6 +75,23 @@ const products = [
 
 function renderProducts(products, container, category) {
     let productsDomString = '';
+    const filteredProducts = products.filter(product =>
+        product.category === category);
+    for (const product of filteredProducts) {
+        // Розділити назву та ціну
+        const [title, price] = product.title.split('-');
+        productsDomString += `
+        <img class="treats__photo" src="${product.image}" alt="${product.description}" width="60">
+        <p class="treats__names">${title}<span class="price">${price}</span></p>
+        <p class="treats__description">${product.description}</p>
+        `;
+    }
+    container.innerHTML = productsDomString;
+}
+
+
+/*function renderProducts(products, container, category) {
+    let productsDomString = '';
     const filteredProducts = products.filter( product =>
         product.category === category);
     for (const product of filteredProducts) {
@@ -85,7 +102,7 @@ function renderProducts(products, container, category) {
         `;
     }
     container.innerHTML = productsDomString;
-}
+}*/
 
 renderProducts(products, document.querySelector('.cats__products'), 'cats');
 renderProducts(products, document.querySelector('.dogs__products'), 'dogs');
