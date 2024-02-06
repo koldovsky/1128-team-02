@@ -1,7 +1,7 @@
 document.addEventListener("partialsLoaded", () => {
-  import('./burger-menu.js');
-  import('./cart-modal.js');
-
+  import ('./cart-modal.js');
+  
+  // import('./burger-menu.js');
 });
 
 const products = [
@@ -363,14 +363,113 @@ document.querySelectorAll('.btn-buy').forEach(btn => {
 })
 
 
-function getProductById(id) {
-  return products.find(product => product.id === id)
-}
-
 function addProductToCartSimulator(event) {
   const id = event.target.dataset.id;
-  const prod = getProductById(id)
-  // window.alert(prod.title)
-  console.log(prod)
+  let count = Number(document.getElementById("cartCount").textContent)
+  const cartTab = document.querySelector(".cart-tab");
+  const imageToVibrate = document.querySelector(".cart-anim");
+
+  let prod = products.find(product => product.id === id)
+
+  const defaultEl = document.querySelector('.def-el-in-cart')
+  if (defaultEl) {defaultEl.remove()};
+  
+  document.querySelector(".order-total-price").textContent = 0;
+ 
+  document.getElementById("cartCount").textContent = count;
+  
+  cartTab.style.display = "block";
+
+  function vibrateOnce() {
+    imageToVibrate.classList.remove('cart-anim');
+    void imageToVibrate.offsetWidth;
+    imageToVibrate.classList.add('cart-anim');
+  }
+  
+  let checkIfProductInCart = document.getElementById(`${prod.id}`);
+
+  if  (!checkIfProductInCart) {
+    document.getElementById("cartCount").textContent = Number(count) + 1;
+    insertProductsToCart(prod)
+  } else {
+    vibrateOnce()
+    const currProd = document.getElementById(`${prod.id}`);
+    const currProdAmountInp = currProd.querySelector('.purchase__quantity-input');
+    const currAmount = currProdAmountInp.value
+    currProd.querySelector('.purchase__quantity-input').value = Number(currAmount) + 1
+  }
+  
+  getTotalPrice()
+
+  const cartIcon = document.querySelector(".cart-icon");
+  cartIcon.addEventListener("click", function(){
+    const cartModal = document.getElementById("cartModal");
+    cartModal.style.display = "block";
+  });
+
+  function insertProductsToCart(product) {
+    let cartProdsDomString = "";
+    cartProdsDomString += `
+    <div class="cart-tab__order-details-inner" id=${product.id}>
+      <div class="cart-tab__order-details-inner-img">
+      <img
+        class="order-details-img"
+        src=${product.image}
+        alt="product img"
+      />
+      </div>
+      <div class="cart-tab__order-details-inner-name">
+        <a class="order-details-name" href="#">${product.title}</a>
+      </div>
+      <div class="details__purchase">
+        <div class="details__inner">
+          <input
+            type="number"
+            class="purchase__quantity-input"
+            value="1"
+            data-test="quantity-input"
+          />
+          <div class="purchase__quantity-buttons">
+            <img
+              class="button-up"
+              src="img/button-up.svg"
+              alt="Button Up"
+            />
+            <img
+              class="button-down"
+              src="img/button-down.svg"
+              alt="Button Down"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="cart-tab__order-details-price">
+        <p class="order-details-price">${product.price}</p>
+      </div>
+      <div class="cart-tab__order-details-delete-item">
+        <img
+          class="order-details-delete-icon"
+          src="img/delete-icon.svg"
+          alt="delete-icon"
+        />
+      </div>
+    </div>
+  </div>
+        `;
+    document.querySelector(".cart-tab__order-total-price").insertAdjacentHTML('beforebegin', cartProdsDomString);
+  }
 }
 
+function getTotalPrice() {
+  const prodsInCart = document.querySelectorAll('.cart-tab__order-details-inner');
+  let totalPrice = 0;
+
+  prodsInCart.forEach( function(product) {
+    const prodPrice = product.querySelector('.order-details-price').textContent.replace('$','').replace(',','.');
+    const prodAmount = product.querySelector('.purchase__quantity-input').value
+
+    totalPrice += Number(prodPrice) * prodAmount;
+  })
+
+  document.querySelector(".order-total-price").textContent = '$' + totalPrice.toFixed(2);
+}
