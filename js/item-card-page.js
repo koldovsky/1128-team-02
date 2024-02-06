@@ -12,9 +12,9 @@ document.addEventListener("partialsLoaded", () => {
       quantityInput.value = parseInt(quantityInput.value, 10) - 1;
     }
   });
+
   const buyButton = document.getElementById("buyButton");
   const cartTab = document.querySelector(".cart-tab");
-  const cartIcon = document.querySelector(".cart-icon");
   const imageToVibrate = document.querySelector(".cart-anim");
   let count = 0;
 
@@ -30,6 +30,13 @@ document.addEventListener("partialsLoaded", () => {
     });
 
     const cartIcon = document.querySelector(".cart-tab__icon");
-    cartIcon.addEventListener("click", openModal);
+    cartIcon.addEventListener("click", function () {
+      cartModal.style.display = "block";
+    });
+
+    const closeButton = document.querySelector(".close-modal");
+    closeButton.addEventListener("click", function () {
+      cartModal.style.display = "none";
+    });
   });
 });

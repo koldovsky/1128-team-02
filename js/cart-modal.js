@@ -1,14 +1,20 @@
+const cartModal = document.getElementById("cartModal");
+
 function openModal() {
-  document.getElementById("cartModal").style.display = "block";
+  cartModal.style.display = "block";
 }
 
 function closeModal() {
-  document.getElementById("cartModal").style.display = "none";
+  cartModal.style.display = "none";
 }
 
 window.onclick = function (event) {
-  let modal = document.getElementById("cartModal");
+  let modal = cartModal;
   if (event.target === modal) {
     closeModal();
   }
 };
+
+const closeButton = document.querySelector(".close-modal");
+
+closeButton.addEventListener("click", closeModal);

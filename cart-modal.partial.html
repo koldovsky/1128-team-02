@@ -5,12 +5,15 @@
   </div>
 </div>
 <div id="cartModal" class="modal">
-  <div class="modal-backdrop"></div>
   <div class="modal-content">
     <div class="cart-tab__header">
       <h2 class="cart-tab__header-title">Shopping cart</h2>
-      <img class="close-modal" src="img/close-icon.svg" alt="close-icon" />
-      <!-- <span class="close-modal">&times;</span> -->
+      <img
+        class="close-modal"
+        id="close-modal"
+        src="img/close-icon.svg"
+        alt="close-icon"
+      />
     </div>
     <div class="cart-tab__order-box">
       <div class="cart-tab__order-details">
@@ -53,23 +56,68 @@
           </div>
           <div class="cart-tab__order-details-delete-item">
             <img
-              class="order-details-delete-icom"
+              class="order-details-delete-icon"
               src="img/delete-icon.svg"
               alt="delete-icon"
             />
           </div>
         </div>
         <div class="cart-tab__order-total-price">
-          <p></p>
+          <p class="order-total-price-text">Total:</p>
+          <div class="order-total-price">$6,00</div>
+        </div>
+        <div class="cart-tab__customer-details">
+          <div class="customer-details-place">
+            <h5 class="customer-details-place-text">Place an order</h5>
+          </div>
+          <div class="customer-details-info-block">
+            <p class="customer-details-info">Name</p>
+            <div class="customer-details-star">*</div>
+          </div>
+          <div class="customer-details-input-info">
+            <input
+              type="text"
+              class="customer-details-input"
+              placeholder="Your name"
+            />
+          </div>
+          <div class="customer-details-info-block">
+            <p class="customer-details-info">Email</p>
+            <div class="customer-details-star">*</div>
+          </div>
+          <div class="customer-details-input-info">
+            <input
+              type="text"
+              class="customer-details-input"
+              placeholder="Your email address"
+            />
+          </div>
+          <div class="customer-details-info-block">
+            <p class="customer-details-info">Phone</p>
+            <div class="customer-details-star">*</div>
+          </div>
+          <div class="customer-details-input-info">
+            <input
+              type="text"
+              class="customer-details-input"
+              placeholder="Your Phone"
+            />
+          </div>
+          <div class="customer-details-info-block">
+            <p class="customer-details-info">Comment</p>
+          </div>
+          <div class="customer-details-input-info">
+            <textarea
+              class="customer-details-input-comment"
+              placeholder="Your comment"
+              rows="4"
+            ></textarea>
+          </div>
+          <div class="order-button-block">
+            <button class="order-button">Order</button>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="cart-tab__customer-details"></div>
-    <!-- Содержимое корзины -->
-    <p>Товары в вашей корзине...</p>
-    <!-- Кнопки действий -->
-    <button>Оформить заказ</button>
-    <button onclick="closeModal()">Продолжить покупки</button>
   </div>
 </div>
