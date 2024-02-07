@@ -1,9 +1,142 @@
-.footer__top{
-    padding-top: 100px;
-    padding-bottom: 25px;
+/* Section for the background */
+.footer-top {
+    background-color: var(--background-care-block);
 }
 
+/* A block where everything is stored */
+.footer-top__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px 24px 25px 24px;
+}
 
-.footer-top__title{
-    color: #45c1c7;
+/* Block with a phone number */
+.footer-top__phone-title {
+    color: var(--button-cart-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.footer-top__phone-number {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.footer-top__phone-link {
+    color: var(--price-text-color);
+    font-size: inherit;
+}
+
+.footer-top__phone-link:hover {
+    text-decoration: underline;
+}
+
+/* Block with a Newsletter */
+.footer-top__newsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top__newsletter-text {
+    color: var(--main-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.footer-top__newsletter-link {
+    margin-top: 20px;
+}
+
+.footer-top__newsletter-link-text {
+    color: var(--title-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer-top__newsletter-link-text:hover {
+    text-decoration: underline;
+}
+
+.footer-top__newsletter-link-arrow {
+    color: var(--button-cart-text-color);
+}
+
+/* Block with a Subscribe form */
+.footer-top__form {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.input-email {
+    background-color: var(--background-color-footer-email);
+    color: var(--divider-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 24px;
+    padding: 11px 22px 11px 22px;
+    width: 100%;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.footer-top__subscribe-button {
+    background-color: var(--button-cart-background-color-hover);
+    color: var(--price-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    border: 0px;
+    margin-top: 24px;
+    padding: 11px 22px 11px 22px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+    .footer-top {
+        padding: 0%;
+    }
+
+    .footer-top__content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 100px 25px 25px 25px;
+    }
+
+    .footer-top__phone {
+        padding: 0 15px 0 15px;
+        flex-basis: 41.66667%;
+        max-width: 41.66667%;
+    }
+
+    .footer-top__phone-link {
+        font-size: 50px;
+    }
+
+    .footer-top__newsletter {
+        padding: 0 15px 0 15px;
+        justify-content: center;
+        flex-basis: 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    .footer-top__newsletter-text {
+        padding: 0%;
+        display: flex;
+        text-align: left;
+    }
+
+    .footer-top__form {
+        padding: 0 15px 0 15px;
+        margin: 0%;
+        justify-content: center;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
 }
