@@ -394,9 +394,9 @@ function addProductToCartSimulator(event) {
   } else {
     vibrateOnce()
     const currProd = document.getElementById(`${prod.id}`);
-    const currProdAmountInp = currProd.querySelector('.purchase__quantity-input');
+    const currProdAmountInp = currProd.querySelector('.purchase__quantity-input-modal');
     const currAmount = currProdAmountInp.value
-    currProd.querySelector('.purchase__quantity-input').value = Number(currAmount) + 1
+    currProd.querySelector('.purchase__quantity-input-modal').value = Number(currAmount) + 1
   }
   
   getTotalPrice()
@@ -406,6 +406,12 @@ function addProductToCartSimulator(event) {
     const cartModal = document.getElementById("cartModal");
     cartModal.style.display = "block";
   });
+
+  const closeCart = document.querySelector(".close-modal");
+  closeCart.addEventListener("click", function() {
+    const cartModal = document.getElementById("cartModal");
+    cartModal.style.display = "none";
+  })
 
   function insertProductsToCart(product) {
     let cartProdsDomString = "";
@@ -422,21 +428,21 @@ function addProductToCartSimulator(event) {
         <a class="order-details-name" href="#">${product.title}</a>
       </div>
       <div class="details__purchase">
-        <div class="details__inner">
+        <div class="details__purchase-inner-modal">
           <input
             type="number"
-            class="purchase__quantity-input"
+            class="purchase__quantity-input-modal"
             value="1"
             data-test="quantity-input"
           />
-          <div class="purchase__quantity-buttons">
+          <div class="purchase__quantity-buttons-modal">
             <img
-              class="button-up"
+              class="button-up-modal"
               src="img/button-up.svg"
               alt="Button Up"
             />
             <img
-              class="button-down"
+              class="button-down-modal"
               src="img/button-down.svg"
               alt="Button Down"
             />
@@ -466,10 +472,10 @@ function getTotalPrice() {
 
   prodsInCart.forEach( function(product) {
     const prodPrice = product.querySelector('.order-details-price').textContent.replace('$','').replace(',','.');
-    const prodAmount = product.querySelector('.purchase__quantity-input').value
+    const prodAmount = product.querySelector('.purchase__quantity-input-modal').value
 
     totalPrice += Number(prodPrice) * prodAmount;
   })
 
-  document.querySelector(".order-total-price").textContent = '$' + totalPrice.toFixed(2);
+  document.querySelector(".order-total-price").textContent = '$' + totalPrice.toFixed(2).replace('.', ',');
 }
