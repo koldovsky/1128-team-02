@@ -33,7 +33,7 @@ const products = [
     },
     {
         id: '5',
-        title: 'Tuna & Salmonk-2$',
+        title: 'Tuna & Salmon-2$',
         image: 'img/cats-tuna-salmon.webp',
         description: 'Chicken, Poultry Broth, Liver, Meat By-Products, Salmon, Tuna, Guar Gum, Minerals.',
         category: 'cats',
@@ -51,7 +51,7 @@ const products = [
         id: '7',
         title: 'Grain & Nuts-3$',
         image: 'img/other-grain.webp',
-        description: '>Whole Brown Rice, Oat Groats, Wheat Bran, Wheat, Soybean Meal, Soybean Hulls.',
+        description: 'Whole Brown Rice, Oat Groats, Wheat Bran, Wheat, Soybean Meal, Soybean Hulls.',
         category: 'other',
 
     },
@@ -75,13 +75,18 @@ const products = [
 
 function renderProducts(products, container, category) {
     let productsDomString = '';
-    const filteredProducts = products.filter( product =>
+    const filteredProducts = products.filter(product =>
         product.category === category);
     for (const product of filteredProducts) {
+        const [title, price] = product.title.split('-');
         productsDomString += `
+        <div class="product">
         <img class="treats__photo" src="${product.image}" alt="${product.description}" width="60">
-        <p class="treats__names">${product.title}</p>
-        <p class="treats__description">${product.description}</p>
+            <div class="product-details">
+                <p class="treats__names">${title}<span class="price">${price}</span></p>
+                <p class="treats__description">${product.description}</p>
+            </div>
+        </div>
         `;
     }
     container.innerHTML = productsDomString;

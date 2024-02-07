@@ -1,14 +1,13 @@
-function openModal() {
-  document.getElementById("cartModal").style.display = "block";
-}
+// const quantityInput = document.querySelector(".purchase__quantity-input-modal");
+// const buttonUp = document.querySelector(".button-up-modal");
+// const buttonDown = document.querySelector(".button-down-modal");
 
-function closeModal() {
-  document.getElementById("cartModal").style.display = "none";
-}
+// buttonUp.addEventListener("click", function () {
+//   quantityInput.value = parseInt(quantityInput.value, 10) + 1;
+// });
 
-window.onclick = function (event) {
-  let modal = document.getElementById("cartModal");
-  if (event.target === modal) {
-    closeModal();
-  }
-};
+// buttonDown.addEventListener("click", function () {
+//   if (quantityInput.value > 0) {
+//     quantityInput.value = parseInt(quantityInput.value, 10) - 1;
+//   }
+// });

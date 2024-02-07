@@ -3,12 +3,18 @@
     flex-direction: column;
     background-image: url("../img/coundown-background.png");
     background-size: cover;
-    min-height:860px;
+    min-height:769px;
+    padding-top: 90px;
+    padding-bottom: 100px;
 }
 
 .promotion__block {
-    padding: 170px 0 0 200px;
-    max-width: 570px;
+    padding: 0 24px;
+}
+
+.promotion__info {
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .promotion__subtitle {
@@ -17,14 +23,15 @@
     font-weight: bold;
     color: var(--button-cart-text-color);
     text-align: left;
+    line-height: 21px;
 }
 
 .promotion__title {
     margin-top: 20px;
-    font-size: 82px;
+    font-size: 48px;
     color: var(--title-text-color);
     text-align: left;
-    line-height: 70px;
+    line-height: 48px;
 }
 
 .promotion__description {
@@ -46,7 +53,9 @@
     max-width: 450px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 23px;
+    gap: 14px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .countdown__component {
@@ -55,21 +64,26 @@
     border-width: 1px;
     border-style: solid;
     border-color: var(--button-cart-text-color);
-    width: 93px;
-    height: 93px;
-    padding: 10px 10px;
+    width: 55.5px;
+    height: 55.5px;
+    padding: 2px 2px;
 }
 
 .countdown__number {
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--title-text-color);
 }
 
 .countdown__unit {
     font-family: 'PT Sans', sans-serif;
-    font-size: 18px;
+    font-size: 10px;
     color: var(--title-text-color);
+}
+
+.promotion__button {
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .promotion__button__title {
@@ -96,36 +110,134 @@
     color: var(--price-text-color);
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
+    .promotion {
+        padding-top: 117.5px;
+        padding-bottom: 125px;
+    }
     .promotion__block {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: inherit;
-      padding: 0 0 0 15px;
-      flex: 1;
+        padding: 0 32px;
+        margin-left: 75px;
+    }
+
+    .promotion__info {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .promotion__title {
+      font-size: 70px;
+      line-height: 70px;
+    }
+
+    .promotion__subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .promotion__countdown {
+        gap: 14px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
     .countdown__component {
-        border-radius: 5px;
-        text-align: center;
-        border-width: 1px;
-        border-style: solid;
-        border-color: var(--button-cart-text-color);
-        width: 63px;
-        height: 63px;
-        padding: 5px 5px;
+        width: 70.4px;
+        height: 70.4px;
+        padding: 3px 3px;
     }
-
+    
     .countdown__number {
-        font-size: 20px;
-        font-weight: 700;
-        color: var(--title-text-color);
+        font-size: 25px;
     }
     
     .countdown__unit {
-        font-family: 'PT Sans', sans-serif;
-        font-size: 12px;
-        color: var(--title-text-color);
+        font-size: 15px;
     }
-  }
+    
+    .promotion__button {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (min-width: 992px) {
+    .promotion {
+        min-height:953px;
+        padding-top: 145px;
+        padding-bottom: 150px;
+    }
+
+    .promotion__block {
+        padding: 0 40px;
+        margin-left: 250px;
+        max-width: 700px;
+    }
+
+    .promotion__info {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .promotion__title {
+      font-size: 82px;
+      line-height: 82px;
+    }
+
+    .promotion__subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .promotion__countdown {
+        gap: 14px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .countdown__component {
+        width: 75px;
+        height: 75px;
+        padding: 3px 3px;
+    }
+    
+    .countdown__number {
+        font-size: 25px;
+    }
+    
+    .countdown__unit {
+        font-size: 15px;
+    }
+    
+    .promotion__button {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .promotion__block {
+        padding: 0 40px;
+        margin-left: 300px;
+        max-width: 700px;
+    }
+
+    .promotion__countdown {
+        gap: 28px;
+    }
+
+    .countdown__component {
+        width: 93px;
+        height: 93px;
+        padding: 4px 4px;
+    }
+    
+    .countdown__number {
+        font-size: 36px;
+    }
+    
+    .countdown__unit {
+        font-size: 18px;
+    }
+}

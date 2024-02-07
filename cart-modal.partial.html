@@ -5,17 +5,20 @@
   </div>
 </div>
 <div id="cartModal" class="modal">
-  <div class="modal-backdrop"></div>
   <div class="modal-content">
     <div class="cart-tab__header">
       <h2 class="cart-tab__header-title">Shopping cart</h2>
-      <img class="close-modal" src="img/close-icon.svg" alt="close-icon" />
-      <!-- <span class="close-modal">&times;</span> -->
+      <img
+        class="close-modal"
+        id="close-modal"
+        src="img/close-icon.svg"
+        alt="close-icon"
+      />
     </div>
     <div class="cart-tab__order-box">
       <div class="cart-tab__order-details">
         <h5 class="order-text">Products</h5>
-        <div class="cart-tab__order-details-inner">
+        <div class="cart-tab__order-details-inner def-el-in-cart">
           <div class="cart-tab__order-details-inner-img">
             <img
               class="order-details-img"
@@ -26,22 +29,22 @@
           <div class="cart-tab__order-details-inner-name">
             <a class="order-details-name" href="#">DOGGY Fun Set</a>
           </div>
-          <div class="details__purchase">
-            <div class="details__inner">
+          <div class="details__purchase-modal">
+            <div class="details__purchase-inner-modal">
               <input
                 type="number"
-                class="purchase__quantity-input"
+                class="purchase__quantity-input-modal"
                 value="1"
                 data-test="quantity-input"
               />
-              <div class="purchase__quantity-buttons">
+              <div class="purchase__quantity-buttons-modal">
                 <img
-                  class="button-up"
+                  class="button-up-modal"
                   src="img/button-up.svg"
                   alt="Button Up"
                 />
                 <img
-                  class="button-down"
+                  class="button-down-modal"
                   src="img/button-down.svg"
                   alt="Button Down"
                 />
@@ -53,23 +56,68 @@
           </div>
           <div class="cart-tab__order-details-delete-item">
             <img
-              class="order-details-delete-icom"
+              class="order-details-delete-icon"
               src="img/delete-icon.svg"
               alt="delete-icon"
             />
           </div>
         </div>
         <div class="cart-tab__order-total-price">
-          <p></p>
+          <p class="order-total-price-text">Total:</p>
+          <div class="order-total-price">$6,00</div>
+        </div>
+        <div class="cart-tab__customer-details">
+          <div class="customer-details-place">
+            <h5 class="customer-details-place-text">Place an order</h5>
+          </div>
+          <div class="customer-details-info-block">
+            <p class="customer-details-info">Name</p>
+            <div class="customer-details-star">*</div>
+          </div>
+          <div class="customer-details-input-info">
+            <input
+              type="text"
+              class="customer-details-input"
+              placeholder="Your name"
+            />
+          </div>
+          <div class="customer-details-info-block">
+            <p class="customer-details-info">Email</p>
+            <div class="customer-details-star">*</div>
+          </div>
+          <div class="customer-details-input-info">
+            <input
+              type="text"
+              class="customer-details-input"
+              placeholder="Your email address"
+            />
+          </div>
+          <div class="customer-details-info-block">
+            <p class="customer-details-info">Phone</p>
+            <div class="customer-details-star">*</div>
+          </div>
+          <div class="customer-details-input-info">
+            <input
+              type="text"
+              class="customer-details-input"
+              placeholder="Your Phone"
+            />
+          </div>
+          <div class="customer-details-info-block">
+            <p class="customer-details-info">Comment</p>
+          </div>
+          <div class="customer-details-input-info">
+            <textarea
+              class="customer-details-input-comment"
+              placeholder="Your comment"
+              rows="4"
+            ></textarea>
+          </div>
+          <div class="order-button-block">
+            <button class="order-button">Order</button>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="cart-tab__customer-details"></div>
-    <!-- Содержимое корзины -->
-    <p>Товары в вашей корзине...</p>
-    <!-- Кнопки действий -->
-    <button>Оформить заказ</button>
-    <button onclick="closeModal()">Продолжить покупки</button>
   </div>
 </div>
