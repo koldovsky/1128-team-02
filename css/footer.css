@@ -1,15 +1,237 @@
-.footer__logo{
-    width: 193px;
+/* Section for the background */
+.footer {
+    background-color: var(--background-care-block);
 }
 
-.footer__social-icons{
+/* A block where everything is stored */
+.footer__content {
+    padding: 45px 24px 90px 24px;
+}
+
+/* Block with content about brand */
+.footer__content-brand {
+    padding: 0 15px 0 15px;
     display: flex;
-    list-style-type: none;
-    margin-left: 10px;
+    flex-direction: column;
 }
 
-.footer__social-icons img{
-    margin-right: 15px;
-    width: 31px; 
+/* logo */
+.footer__content-brand img {
+    width: 193px;
+    margin: auto;
+}
+
+.footer__content-brand-text {
+    color: var(--main-text-color);
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+/* mail link */
+.footer__mail {
+    color: var(--main-text-color);
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer__mail:hover {
+    text-decoration: underline;
+}
+
+.footer__social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: auto;
+    padding-top: 20px;
+    list-style-type: none;
+}
+
+.footer__social-icons img {
+    width: 31px;
     height: auto;
+}
+
+.footer__icon {
+    margin: 0 7.5px 15px 7.5px;
+}
+
+/* formatted <ul> */
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Navigation block */
+.nav-title {
+    color: var(--title-text-color);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* formatted <li> */
+.footer__content-menu {
+    color: var(--color-menu-footer-list);
+    margin: 10px 5px 10px 5px;
+}
+
+.footer__content-menu:hover {
+    text-decoration: underline;
+}
+
+/* formatted all text link */
+.footer__content-menu-link {
+    color: var(--color-menu-footer-list);
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.footer__wrapper img {
+    width: 33px;
+    margin: 0 auto;
+}
+
+.footer__content-navigation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0 15px 0 15px;
+}
+
+.footer__content-customer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0 15px 0 15px;
+}
+
+.footer__content-help {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0 15px 0 15px;
+}
+
+/* Copyright block */
+.footer__copyright {
+    background-color: var(--head-background-color);
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__copyright-content {
+    color: var(--main-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 5px 24px 5px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__copyright-text {
+    color: var(--main-text-color);
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer__copyright-text a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    /* A block where everything is stored */
+    .footer__content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 45px 25px 90px 25px;
+    }
+
+    /* A block with information about the brand */
+    .footer__content-brand {
+        padding: 0 15px;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    .footer__content-brand img {
+        margin: 0%;
+    }
+
+    .footer__content-brand-text {
+        justify-content: flex-start;
+        text-align: left;
+        line-height: 27.2px;
+    }
+
+    .footer__social-icons {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .footer__icon {
+        margin: 0 15px 15px 0;
+    }
+
+    /* A navigation block */
+    .footer__content-navigation {
+        margin: 0%;
+        padding: 0 15px;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    /* A Customer Service block */
+    .footer__content-customer {
+        margin: 0%;
+        padding: 0 15px;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    /* A Help & Information block */
+    .footer__content-help {
+        margin: 0%;
+        padding: 0 15px;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    .nav-title {
+        justify-content: flex-start;
+        text-align: left;
+        margin-left: 0%;
+        font-size: 24px;
+    }
+
+    .footer__content-menu {
+        justify-content: flex-start;
+        text-align: left;
+        margin-left: 0%;
+    }
+
+    .footer__content-menu-link {
+        font-size: 15px;
+    }
+
+    .footer__wrapper img {
+        justify-content: flex-start;
+        text-align: left;
+        margin-left: 0%;
+    }
+
+    /* A Copyright block */
+    .footer__copyright-text {
+        font-size: 15px;
+        margin: 7px 0;
+    }
 }
