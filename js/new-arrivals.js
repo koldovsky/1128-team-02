@@ -1,7 +1,7 @@
-/* const newArrivals = [
+ //const newArrivals = [
     {
     id: "1",
-     link: "#",
+     link: "storehomepage.html",
     image: "img/vitalifecrunchstickstreat.png",
     alt: "VITALIFE Crunch Sticks Treat",
     title: "VITALIFE Crunch Sticks Treat",
@@ -9,7 +9,7 @@
     },
       {
     id: "2",
-     link: "#",
+     link: "storehomepage.html",
     image: "img/dunawoventoy.png",
     alt: "DUNA Woven Toy",
     title: "DUNA Woven Toy",
@@ -17,7 +17,7 @@
     },
      {
     id: "3",
-     link: "#",
+     link: "storehomepage.html",
     image: "img/serawovenleash.png",
     alt: "SERA Woven Leash",
     title: "SERA Woven Leash",
@@ -25,7 +25,7 @@
     },
     {
     id: "4",
-     link: "#",
+     link: "storehomepage.html",
     image: "img/optyplasticbowl.png",
     alt: "OPTY Plastic Bowl",
     title: "OPTY Plastic Bowl",
@@ -33,11 +33,11 @@
     },
     {
     id: "5",
-     link: "#",
+     link: "storehomepage.html",
     image: "img/egobutterflytoy.png",
     alt: "EGO Butterfly Toy,
     title: "EGO Butterfly Toy",
     price: "$ 8,00",
     },
 ]
-*/
+
