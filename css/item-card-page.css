@@ -90,13 +90,13 @@
   flex-direction: column;
 }
 
-.details__title {
+.details__status {
   font-family: "PT Sans", sans-serif;
   font-size: 1.063rem;
   color: var(--stock-text-color);
 }
 
-.details__status {
+.details__title {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--title-text-color);
