@@ -38,7 +38,7 @@
 .arrivals__carousel {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
   margin-top: 50px;
   padding: 0 40px 0 40px;
 }
@@ -47,7 +47,7 @@
   z-index: 2;
 }
 
-.arrivals__arrow-button {
+.arrivals__carousel-arrow-button {
   background-color: var(--head-main-text-color);
   border-radius: 25px;
   height: 32px;
