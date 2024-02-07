@@ -404,10 +404,10 @@ function addProductToCartSimulator(event) {
     vibrateOnce();
     const currProd = document.getElementById(`${prod.id}`);
     const currProdAmountInp = currProd.querySelector(
-      ".purchase__quantity-input"
+      ".purchase__quantity-input-modal"
     );
     const currAmount = currProdAmountInp.value;
-    currProd.querySelector(".purchase__quantity-input").value =
+    currProd.querySelector(".purchase__quantity-input-modal").value =
       Number(currAmount) + 1;
   }
 
@@ -417,6 +417,12 @@ function addProductToCartSimulator(event) {
   cartIcon.addEventListener("click", function () {
     const cartModal = document.getElementById("cartModal");
     cartModal.style.display = "block";
+  });
+
+  const closeCart = document.querySelector(".close-modal");
+  closeCart.addEventListener("click", function () {
+    const cartModal = document.getElementById("cartModal");
+    cartModal.style.display = "none";
   });
 
   function insertProductsToCart(product) {
@@ -434,21 +440,21 @@ function addProductToCartSimulator(event) {
         <a class="order-details-name" href="#">${product.title}</a>
       </div>
       <div class="details__purchase">
-        <div class="details__inner">
+        <div class="details__purchase-inner-modal">
           <input
             type="number"
-            class="purchase__quantity-input"
+            class="purchase__quantity-input-modal"
             value="1"
             data-test="quantity-input"
           />
-          <div class="purchase__quantity-buttons">
+          <div class="purchase__quantity-buttons-modal">
             <img
-              class="button-up"
+              class="button-up-modal"
               src="img/button-up.svg"
               alt="Button Up"
             />
             <img
-              class="button-down"
+              class="button-down-modal"
               src="img/button-down.svg"
               alt="Button Down"
             />

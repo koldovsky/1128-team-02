@@ -7,4 +7,5 @@ document.addEventListener("partialsLoaded", () => {
     import('./partners-carousel.js')
     import('./drytreats.js');
     import('./countdown.js');
+    import('./new-arrivals.js');
 });
