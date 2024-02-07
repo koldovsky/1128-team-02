@@ -1,20 +1,13 @@
-const cartModal = document.getElementById("cartModal");
+const quantityInput = document.querySelector(".purchase__quantity-input-modal");
+const buttonUp = document.querySelector(".button-up-modal");
+const buttonDown = document.querySelector(".button-down-modal");
 
-function openModal() {
-  cartModal.style.display = "block";
-}
+buttonUp.addEventListener("click", function () {
+  quantityInput.value = parseInt(quantityInput.value, 10) + 1;
+});
 
-function closeModal() {
-  cartModal.style.display = "none";
-}
-
-window.onclick = function (event) {
-  let modal = cartModal;
-  if (event.target === modal) {
-    closeModal();
+buttonDown.addEventListener("click", function () {
+  if (quantityInput.value > 0) {
+    quantityInput.value = parseInt(quantityInput.value, 10) - 1;
   }
-};
-
-const closeButton = document.querySelector(".close-modal");
-
-closeButton.addEventListener("click", closeModal);
+});
