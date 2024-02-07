@@ -1,28 +1,52 @@
 .bestproducers {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: auto;
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 15px;
     padding-right: 15px;
+    align-items: stretch;
 }
 
 .bestproducers__image-container {
-    max-width: 66%;
     padding-left: 15px;
     padding-right: 15px;
-    height: 510px;
+    display: flex;
+    align-items: center;
+}
+
+.bestproducers__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .bestproducers__content {
-    width: 33%;
     padding-left: 15px;
     padding-right: 15px;
-    height: 510px;
-    justify-content: flex-start;
+    /* max-height: 498px; */
+    /* justify-content: flex-start; */
+    background-image: url("../img/bannerfood.png");
+    /* background-color: transparent; */
+
 }
 
+@media (max-width: 768px) {
+    .bestproducers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bestproducers__content {
+        margin-top: 50px ;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 
 .bestproducers__textblock {
+
     text-align: left;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -43,7 +67,7 @@
     font-size: 32px;
     font-weight: 700;
     margin-top: 20px;
-    line-height: 38.4px;
+    line-height: 33.6px;
 }
 
 .bestproducers__link {
