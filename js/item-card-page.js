@@ -1,4 +1,11 @@
 document.addEventListener("partialsLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("productId");
+
+  if (productId) {
+    showProductInfo(productId);
+  }
+
   function showProductInfo() {
     const product = JSON.parse(localStorage.getItem("selectedProduct"));
     if (!product) return;
