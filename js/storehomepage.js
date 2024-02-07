@@ -567,7 +567,7 @@ function getTotalPrice() {
       .querySelector(".order-details-price")
       .textContent.replace("$", "")
       .replace(",", ".");
-    const prodAmount = product.querySelector(".purchase__quantity-input").value;
+    const prodAmount = product.querySelector(".purchase__quantity-input-modal").value;
 
     totalPrice += Number(prodPrice) * prodAmount;
   });

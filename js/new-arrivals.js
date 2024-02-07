@@ -124,7 +124,7 @@ function prevSlide() {
   renderSlide();
 }
 
-setInterval(nextSlide, 5000);
+setInterval(nextSlide, 3000);
 
 const btnNext = document.querySelector(".arrivals__carousel-btn-next");
 btnNext.addEventListener("click", nextSlide);
