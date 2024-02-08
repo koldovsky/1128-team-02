@@ -5,6 +5,7 @@
 }
 
 .header__data{
+    width: 107%;
     background-color: var(--head-background-color);
     color: var(--head-main-page-color);
     font-weight: bold;
@@ -15,8 +16,7 @@
 }
 
 .header__contacts-info{
-    display: flex;   
-    
+    display: flex;
 }
 
 .header__data .header__contakts{
