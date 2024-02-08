@@ -1,6 +1,6 @@
-header__hero-logo{
-    position: absolute;
-    bottom: 50px;
+.header__hero-logo{
+    width: 100%;
+    height: auto;
 }
 
 .header__hero-text{
