@@ -31,9 +31,18 @@
 }
 
 .recommendations__nav {
+  display: grid;
+  justify-content: center;
   margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+@media (max-width: 750px) {
+  .recommendations__category {
+    grid-template-columns: 1fr 1fr;
+    /* justify-items: center; */
+  }
 }
 
 .recommendations__button {

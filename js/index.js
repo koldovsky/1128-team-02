@@ -8,4 +8,5 @@ document.addEventListener("partialsLoaded", () => {
     import('./drytreats.js');
     import('./countdown.js');
     import('./new-arrivals.js');
+    import('./recommendations.js');
 });
