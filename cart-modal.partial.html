@@ -70,52 +70,63 @@
           <div class="customer-details-place">
             <h5 class="customer-details-place-text">Place an order</h5>
           </div>
-          <div class="customer-details-info-block">
-            <p class="customer-details-info">Name</p>
-            <div class="customer-details-star">*</div>
-          </div>
-          <div class="customer-details-input-info">
-            <input
-              type="text"
-              class="customer-details-input"
-              placeholder="Your name"
-            />
-          </div>
-          <div class="customer-details-info-block">
-            <p class="customer-details-info">Email</p>
-            <div class="customer-details-star">*</div>
-          </div>
-          <div class="customer-details-input-info">
-            <input
-              type="text"
-              class="customer-details-input"
-              placeholder="Your email address"
-            />
-          </div>
-          <div class="customer-details-info-block">
-            <p class="customer-details-info">Phone</p>
-            <div class="customer-details-star">*</div>
-          </div>
-          <div class="customer-details-input-info">
-            <input
-              type="text"
-              class="customer-details-input"
-              placeholder="Your Phone"
-            />
-          </div>
-          <div class="customer-details-info-block">
-            <p class="customer-details-info">Comment</p>
-          </div>
-          <div class="customer-details-input-info">
-            <textarea
-              class="customer-details-input-comment"
-              placeholder="Your comment"
-              rows="4"
-            ></textarea>
-          </div>
-          <div class="order-button-block">
-            <button class="order-button">Order</button>
-          </div>
+          <form
+            id="cart-form"
+            action="https://formspree.io/f/xdoqejoe"
+            method="POST"
+          >
+            <div class="customer-details-info-block">
+              <p class="customer-details-info">Name</p>
+              <div class="customer-details-star">*</div>
+            </div>
+            <div class="customer-details-input-info">
+              <input
+                type="text"
+                name="name"
+                class="customer-details-input"
+                placeholder="Your name"
+              />
+            </div>
+            <div class="customer-details-info-block">
+              <p class="customer-details-info">Email</p>
+              <div class="customer-details-star">*</div>
+            </div>
+            <div class="customer-details-input-info">
+              <input
+                type="email"
+                name="email"
+                class="customer-details-input"
+                placeholder="Your email address"
+              />
+            </div>
+            <div class="customer-details-info-block">
+              <p class="customer-details-info">Phone</p>
+              <div class="customer-details-star">*</div>
+            </div>
+            <div class="customer-details-input-info">
+              <input
+                type="text"
+                name="phone"
+                class="customer-details-input"
+                placeholder="Your Phone"
+              />
+            </div>
+            <div class="customer-details-info-block">
+              <p class="customer-details-info">Comment</p>
+            </div>
+            <div class="customer-details-input-info">
+              <textarea
+                class="customer-details-input-comment"
+                name="comment"
+                placeholder="Your comment"
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="order-button-block">
+              <button id="cart-form-button" class="order-button">Order</button>
+              <p id="cart-form-status"></p>
+            </div>
+          </form>
         </div>
       </div>
     </div>

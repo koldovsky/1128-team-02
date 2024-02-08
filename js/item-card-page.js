@@ -158,4 +158,53 @@ document.addEventListener("partialsLoaded", () => {
     quantityInputModal.value = 0;
     updateTotalPrice();
   });
+
+  let cart = {};
+
+  function showAlert(message, isSuccess = true) {
+    const statusElement = document.getElementById("cart-form-status");
+    statusElement.textContent = message;
+    statusElement.style.color = isSuccess ? "green" : "red";
+  }
+
+  async function order(ev) {
+    ev.preventDefault();
+
+    cart = JSON.parse(localStorage.getItem("selectedProduct")) || {};
+
+    if (Object.keys(cart).length === 0) {
+      return showAlert("Please choose products to order", false);
+    }
+
+    const form = document.querySelector("#cart-form");
+    if (!form.checkValidity()) {
+      return showAlert("Please fill form correctly", false);
+    }
+
+    const data = new FormData(form);
+    data.append("cart", JSON.stringify(cart));
+
+    try {
+      const response = await fetch("https://formspree.io/f/xdoqejoe", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: data,
+      });
+
+      if (response.ok) {
+        form.reset();
+        localStorage.setItem("selectedProduct", JSON.stringify({}));
+        showAlert("Thank you for your order!");
+        document.querySelector(".modal").style.display = "none";
+      } else {
+        throw new Error("Network response was not ok.");
+      }
+    } catch (error) {
+      showAlert("There is an error: " + error, false);
+    }
+  }
+
+  document.querySelector("#cart-form").addEventListener("submit", order);
 });
