@@ -27,41 +27,97 @@ document.addEventListener("partialsLoaded", () => {
   const quantityInput = document.querySelector(".purchase__quantity-input");
   const buttonUp = document.querySelector(".button-up");
   const buttonDown = document.querySelector(".button-down");
+
+  buttonUp.addEventListener("click", () => {
+    quantityInput.value = parseInt(quantityInput.value, 10) + 1;
+  });
+
+  buttonDown.addEventListener("click", () => {
+    if (quantityInput.value > 0) {
+      quantityInput.value = parseInt(quantityInput.value, 10) - 1;
+    }
+  });
+
+  // Код модального вікна:
+
   const buyButton = document.getElementById("buyButton");
   const cartTab = document.querySelector(".cart-tab");
   const imageToVibrate = document.querySelector(".cart-anim");
   const cartModal = document.querySelector(".modal");
   let count = 0;
 
-  buttonUp.addEventListener("click", function () {
-    quantityInput.value = parseInt(quantityInput.value, 10) + 1;
-  });
+  function showProductInfoModal() {
+    const product = JSON.parse(localStorage.getItem("selectedProduct"));
+    if (!product) return;
 
-  buttonDown.addEventListener("click", function () {
-    if (quantityInput.value > 0) {
-      quantityInput.value = parseInt(quantityInput.value, 10) - 1;
+    document.querySelector(".order-details-img").src = product.image;
+    document.querySelector(".order-details-img").alt = product.title;
+    document.querySelector(".order-details-name").textContent = product.title;
+    document.querySelector(".order-details-price").textContent = product.price;
+    document.querySelector(".order-total-price").textContent = product.price;
+  }
+
+  showProductInfoModal();
+
+  function updateTotalPrice() {
+    const product = JSON.parse(localStorage.getItem("selectedProduct"));
+    if (!product) return;
+
+    const priceAsString = product.price.replace(/[^0-9.-]+/g, "");
+    const pricePerUnit = parseFloat(priceAsString);
+
+    if (isNaN(pricePerUnit)) {
+      console.error("Cannot parse product price as a number:", product.price);
+      return;
     }
-  });
 
-  buyButton.addEventListener("click", function () {
-    let quantityToAdd = parseInt(quantityInput.value, 10);
+    const quantity = parseInt(
+      document.querySelector(".purchase__quantity-input-modal").value,
+      10
+    );
+
+    if (!isNaN(quantity) && quantity >= 0) {
+      const totalPrice = quantity > 0 ? pricePerUnit * quantity : 0;
+      document.querySelector(
+        ".order-total-price"
+      ).textContent = `$${totalPrice.toFixed(2)}`;
+    } else {
+      console.error("Quantity is not a valid number:", quantity);
+    }
+
+    const totalPrice = (pricePerUnit * quantity) / 100;
+    document.querySelector(
+      ".order-total-price"
+    ).textContent = `$${totalPrice.toFixed(2)}`;
+  }
+
+  buyButton.addEventListener("click", () => {
+    quantityToAdd = parseInt(quantityInput.value, 10);
     count += quantityToAdd;
     document.getElementById("cartCount").textContent = count;
     cartTab.style.display = "block";
     imageToVibrate.classList.add("cart-anim");
 
-    imageToVibrate.addEventListener("animationend", function () {
+    imageToVibrate.addEventListener("animationend", () => {
       imageToVibrate.classList.remove("vibrating-image");
     });
 
     const cartIcon = document.querySelector(".cart-tab__icon");
-    cartIcon.addEventListener("click", function () {
+    cartIcon.addEventListener("click", () => {
       cartModal.style.display = "block";
+      quantityInputModal.value = quantityToAdd;
+      updateTotalPrice();
     });
 
     const closeButton = document.querySelector(".close-modal");
-    closeButton.addEventListener("click", function () {
+    closeButton.addEventListener("click", () => {
       cartModal.style.display = "none";
+      quantityToAdd = parseInt(quantityInputModal.value, 10);
+      count = quantityToAdd;
+      document.getElementById("cartCount").textContent = count;
+      if (count === 0) {
+        cartTab.style.display = "none";
+      }
     });
   });
 
@@ -71,19 +127,26 @@ document.addEventListener("partialsLoaded", () => {
     }
   };
 
+  const pushNameLink = document.querySelector(".order-details-name");
+  pushNameLink.addEventListener("click", () => {
+    cartModal.style.display = "none";
+  });
+
   const quantityInputModal = document.querySelector(
     ".purchase__quantity-input-modal"
   );
   const buttonUpModal = document.querySelector(".button-up-modal");
   const buttonDownModal = document.querySelector(".button-down-modal");
 
-  buttonUpModal.addEventListener("click", function () {
+  buttonUpModal.addEventListener("click", () => {
     quantityInputModal.value = parseInt(quantityInputModal.value, 10) + 1;
+    updateTotalPrice();
   });
 
-  buttonDownModal.addEventListener("click", function () {
+  buttonDownModal.addEventListener("click", () => {
     if (quantityInputModal.value > 0) {
       quantityInputModal.value = parseInt(quantityInputModal.value, 10) - 1;
+      updateTotalPrice();
     }
   });
 
@@ -91,7 +154,8 @@ document.addEventListener("partialsLoaded", () => {
     ".cart-tab__order-details-delete-item"
   );
 
-  clearQuantity.addEventListener("click", function () {
+  clearQuantity.addEventListener("click", () => {
     quantityInputModal.value = 0;
+    updateTotalPrice();
   });
 });
